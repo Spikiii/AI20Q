@@ -1,14 +1,24 @@
 import characteristic
 
 class dataNode:
+    name = ""
     category = ""
     chars = []
     similarities = {}
 
-    def __init__(self, cat = "Other", chs = [], sims = {}):
+    def __init__(self, nm = "", cat = "Other", chs = [], sims = {}):
+        self.name = nm
         self.category = cat
         self.chars = chs
         self.similarities = {}
+
+    def get(self):
+        """Gets the name of this dataNode."""
+        return self.name
+
+    def set(self, nm):
+        """Sets the name of this dataNode."""
+        self.name = nm
 
     def getCat(self):
         """Gets the category of this dataNode."""
@@ -19,7 +29,7 @@ class dataNode:
         self.category = cat
 
     def getTags(self):
-        """Gets all of the characteristic tags associated with this object"""
+        """Gets all of the characteristic tags associated with this object."""
         return self.chars
 
     def addTag(self, chs):

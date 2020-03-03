@@ -1,0 +1,6 @@
+#object name, category, char1, char2, ...
+
+duck, animal, larger than breadbox, can fly, can swim, lays eggs, has feathers, eats bread, eats bugs
+mouse, animal, smaller than breadbox, !can fly, !can swim, !lays eggs, has fur, eats bread, lives in mouse hole
+
+#END OF FILE#
