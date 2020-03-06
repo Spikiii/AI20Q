@@ -1,5 +1,6 @@
 import dataNode as Dn
 import characteristic as Char
+import oGuesser
 
 #Global variables
 dataPath = "data.txt"
@@ -37,4 +38,6 @@ def printDataBase():
         print(i.get(), i.getCat(), chars)
 
 buildDataBase()
-printDataBase()
+#printDataBase()
+
+oG = oGuesser.oGuesser(dataBase)
