@@ -1,6 +1,6 @@
 #object name, category, char1, char2, ...
 
-duck, animal, larger than breadbox, can fly, can swim, lays eggs, has feathers, eats bread, eats bugs
-mouse, animal, smaller than breadbox, !can fly, !can swim, !lays eggs, has fur, eats bread, lives in mouse hole
+duck, animal, living, larger than breadbox, can walk, can fly, can swim, lays eggs, !mammal, !rodent, bird, !has fur, has feathers, eats bread, eats bugs, lives in nest, lives in pond, has beak, has bill, has wings, has legs, can float, has webbed feet
+mouse, animal, smaller than breadbox, can walk, !can fly, !can swim, !lays eggs, mammal, rodent, !bird, has fur, !has feathers, eats bread, lives in mouse hole, !has wings, has tail, has ears, gives live birth, eats cheese, eaten by cats, !has webbed feet, has four legs
 
 #END OF FILE#
