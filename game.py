@@ -3,7 +3,7 @@ import characteristic as Char
 import oGuesser
 
 #Global variables
-dataPath = "data.txt"
+dataPath = "data/data.txt"
 dataBase = []
 
 def buildDataBase():
@@ -41,3 +41,4 @@ buildDataBase()
 #printDataBase()
 
 oG = oGuesser.oGuesser(dataBase)
+oG.train()
