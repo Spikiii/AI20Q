@@ -2,19 +2,23 @@ import dataNode as Dn
 import characteristic as Char
 import oGuesser
 
-#Global variables
-dataPath = "data/data.txt"
+#Initializations
 dataBase = []
+
+#Settings
+dataPath = "data/data.txt"
+charDictPath = "data/charDict.txt"
 
 def buildDataBase():
     """Builds the database that the AI will use. Make sure to run this before anything else."""
     rawData = []
-    with open(dataPath) as f: #Reads through the data line by line
+    with open(dataPath, "r") as f: #Reads through the data line by line
         for line in f:
             rawData.append(line[:-1])
+
     for i in rawData: #Ignores any line that has a # at its start or is empty
         if(i != "" and i[0] != "#"):
-            line = i.split(", ")
+            line = i.split(",")
             chars = []
             for j in range(2, len(line)):
                 if(line[j][0] == "!"):
@@ -40,5 +44,5 @@ def printDataBase():
 buildDataBase()
 #printDataBase()
 
-oG = oGuesser.oGuesser(dataBase)
+oG = oGuesser.oGuesser(dataBase, charDictPath)
 oG.train()

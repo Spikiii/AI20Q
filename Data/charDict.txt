@@ -1,0 +1,34 @@
+#Character Dictionary
+#Don't touch this please. The model will need to retrain if you do.
+
+0,living
+1,larger than breadbox
+2,can walk
+3,can fly
+4,can swim
+5,lays eggs
+6,mammal
+7,rodent
+8,bird
+9,has fur
+10,has feathers
+11,eats bread
+12,eats bugs
+13,lives in nest
+14,lives in pond
+15,has beak
+16,has bill
+17,has wings
+18,has legs
+19,can float
+20,has webbed feet
+21,smaller than breadbox
+22,lives in mouse hole
+23,has tail
+24,has ears
+25,gives live birth
+26,eats cheese
+27,eaten by cats
+28,has four legs
+
+#END OF FILE#
