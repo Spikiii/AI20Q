@@ -15,14 +15,15 @@ class oGuesser:
 
     #Settings
     modelPath = "Models/oGuesser.h5"
+    vb = False #Verbose
 
     #Dictionaries
     chars = {} #Characteristics as {n:characteristic}
     revChars = {} #Characteristics as {characteristic:n}
     cats = {0:"animal", 1:"plant", 2:"mineral", 3:"other"} #Categories
     revCats = {"animal":0, "plant":1, "mineral":2, "other":3}
-    letters = {index:letter for index, letter in enumerate(ascii_lowercase, start=1)} #Letters as {n:letter}
-    revLetters = {letter:index for index, letter in enumerate(ascii_lowercase, start=1)} #Letters as {letter:n}
+    letters = {} #Letters as {n:letter}
+    revLetters = {} #Letters as {letter:n}
 
     #Setting up stuff for Keras
     model = []
@@ -31,8 +32,10 @@ class oGuesser:
     except:
         model = Sequential()
         model.add(Dense(20, input_dim = 41, activation = "relu")) #We can screw around with these later
-        model.add(Dense(25, activation = "relu")) #to figure out what works best for the model
-        model.add(Dense(30, activation = "sigmoid"))
+        model.add(Dense(25, activation = "sigmoid")) #to figure out what works best for the model
+        model.add(Dense(25, activation = "relu"))
+        model.add(Dense(25, activation = "sigmoid"))
+        model.add(Dense(30, activation = "relu"))
         model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
         model.save(modelPath)
 
@@ -41,6 +44,7 @@ class oGuesser:
         self.charDictPath = cD
 
         self.processData()
+        self.buildLetterDict()
 
         #print(self.chars)
         #print(self.trainingData)
@@ -53,10 +57,12 @@ class oGuesser:
         self.chars = {}
         self.revChars = {}
 
-        try:
-            self.loadChars()
-        except:
-            self.buildChars()
+        self.buildChars()
+
+        #try:
+        #    self.loadChars()
+        #except:
+        #    self.buildChars()
 
         for i in self.dataBase:
             tags = i.getTags()
@@ -78,6 +84,14 @@ class oGuesser:
                 thsRand.append(tags[j].getTruth())
 
             self.trainingData.append([i.get(), i.getCat(), charsRand, thsRand])
+
+    def buildLetterDict(self):
+        """Creates a dictionary of letters. This is called as part of initialization."""
+        for i in self.trainingData:
+            for j in i[0]:
+                if (not j in self.revLetters):
+                    self.letters[len(self.letters)] = j
+                    self.revLetters[j] = len(self.revLetters)
 
     def buildChars(self):
         """Builds a characteristic dictionary from the database."""
@@ -119,25 +133,28 @@ class oGuesser:
                 self.revChars[line[1]] = int(line[0])
 
 
-    def train(self, epochs = 50):
+    def train(self, epochs = 100):
         """Trains the model."""
         X = []
         y = []
 
         for i in self.trainingData:
-            row = [] #Creating X data
+            row = []  # Creating X data
             row.append(self.revCats[i[1]])
             for j in range(len(i[2])):
                 row.append(i[2][j])
-                if(i[3][j]):
+                if (i[3][j]):
                     row.append(1)
                 else:
                     row.append(0)
+            if(len(row) < 41): # Making sure that the rest of row is filled with 0.
+                for j in range(len(row), 41):
+                    row.append(0)
 
-            characters = [] #Creating Y data
+            characters = []  # Creating Y data
             for j in i[0]:
                 characters.append(self.revLetters[j])
-            if(len(characters) < 30): #Making sure that the rest of characters is filled with 0s.
+            if(len(characters) < 30):  # Making sure that the rest of characters is filled with 0s.
                 for j in range(len(characters), 30):
                     characters.append(0)
 
@@ -149,5 +166,25 @@ class oGuesser:
         #print(y)
         #print(np.shape(y))
 
-        self.model.fit(np.array(X), np.array(y), epochs = epochs)
+        self.model.fit(np.array(X), np.array(y), epochs = epochs, verbose = self.vb)
         self.model.save(self.modelPath)
+
+    def guessObject(self, chars):
+        """Guesses an object based on a characteristic array passed in. Will be updated to accept gameStates when those are implemented."""
+        if (len(chars) < 41):  # Making sure that chars is of the correct length
+            for j in range(len(chars), 41):
+                chars.append(0)
+        if(len(chars) > 41):
+            chars = Rd.sample(chars, k = 41)
+
+        prediction = self.model.predict(np.array([chars]))
+        predictionString = ""
+
+        print(prediction)
+
+        for i in prediction[0]:
+            predictionString = predictionString + self.letters[int(i)]
+        return predictionString
+
+    def getFeedback(self):
+        """Asks the user for feedback after an object is guessed."""

@@ -3,5 +3,80 @@
 
 duck,animal,living,larger than breadbox,can walk,can fly,can swim,lays eggs,!mammal,!rodent,bird,!has fur,has feathers,eats bread,eats bugs,lives in nest,lives in pond,has beak,has bill,has wings,has legs,can float,has webbed feet
 mouse,animal,smaller than breadbox,can walk,!can fly,!can swim,!lays eggs,mammal,rodent,!bird,has fur,!has feathers,eats bread,lives in mouse hole,!has wings,has tail,has ears,gives live birth,eats cheese,eaten by cats,!has webbed feet,has four legs
+tomato,plant,vegetable,red skin,red inside,sour flavor,medium size,round shaped,thin stem
+banana,plant,fruit,yellow skin,white  inside,sweet flavor,medium size,long shaped,thick stem
+potato,plant,vegetable,brown skin,white  inside,medium size,oval shaped
+cucumber,plant,vegetable,green skin,green inside,medium size,long shaped
+watermelon,plant,fruit,green skin,red inside,sweet flavor,large size,seeds,black seeds,round shaped,thick stem
+sweet potato,plant,vegetable,brown skin,yellow inside,sweet flavor,medium size,long shaped
+lettuce,plant,vegetable,green skin,medium size,leaf shaped
+cabbage,plant,vegetable,green skin,medium size,round shaped
+cauliflower,plant,vegetable,white skin,medium size,thick stem
+brussel sprout,plant,vegetable,green skin,small size,round shaped
+broccoli,plant,vegetable,green skin,medium size,thick stem
+pumpkin,plant,vegetable,orange skin,orange inside,creamy flavor,large size,seeds,white seeds,oval shaped,thick stem
+egg plants ,plant,vegetable,purple skin,white  inside,medium size,seeds,white seeds,round shaped,thick stem
+corn,plant,vegetable,green skin,yellow inside,sweet flavor,medium size,long shaped
+asparagus,plant,vegetable,green skin,small size,long shaped
+bamboo shoots,plant,vegetable,green skin,yellow inside,medium size,long shaped
+green beans,plant,vegetable,green skin,small size,long shaped
+onion,plant,vegetable,yellow skin,white  inside,onion flavor,medium size,round shaped
+green onion,plant,vegetable,green skin,onion flavor,small size,long shaped
+beets,plant,vegetable,red skin,white  inside,sweet flavor,bitter flavor,small size,heart shaped,thin stem
+carrot,plant,vegetable,orange skin,orange inside,small size,long shaped
+avocado,plant,fruit,green skin,green inside,creamy flavor,medium size,pit,brown pit,oval shaped
+bok choy,plant,vegetable,green skin,medium size,leaf shaped
+celery,plant,vegetable,green skin,medium size,long shaped
+collards,plant,vegetable,green skin,medium size,leaf shaped
+daikon,plant,vegetable,white skin,white  inside,sweet flavor,large size,long shaped,thick stem
+edamame,plant,vegetable,green skin,small size,long shaped,thin stem
+ginger root,plant,vegetable,yellow skin,yellow inside,peppery flavor,small size,root shaped
+kale,plant,vegetable,green skin,medium size,leaf shaped
+leek,plant,vegetable,green skin,onion flavor,medium size,long shaped,thin stem
+mushroom,plant,vegetable,black skin,white inside,small size
+okra,plant,vegetable,green skin,white inside,small size,seeds,white seeds,long shaped,thick stem
+peas,plant,vegetable,green skin,small size,long shaped,thin stem
+green pepper,plant,vegetable,green skin,medium size,seeds,yellow seeds,thick stem
+spinach,plant,vegetable,green skin,small size,leaf shaped,thin stem
+squash,plant,vegetable,orange skin,creamy flavor,large size,seeds,white seeds,thick stem
+turnip,plant,vegetable,purple skin,white inside,sour flavor,small size,heart shaped,thin stem
+yam root,plant,vegetable,brown skin,white inside,sweet flavor,medium size,long shaped,thin stem
+zucchini,plant,vegetable,green skin,white inside,creamy flavor,medium size,seeds,white seeds,long shaped,thick stem
+grapes,plant,fruit,purple skin,purple inside,sweet flavor,sour flavor,small size,seeds,brown seeds,round shaped,thin stem
+cherry,plant,fruit,red skin,red inside,sweet flavor,small size,pit,brown pit,round shaped,thin stem
+apple,plant,fruit,red skin,yellow inside,sweet flavor,medium size,seeds,black seeds,round shaped,thin stem
+peach,plant,fruit,yellow skin,white inside,sweet flavor,medium size,pit,brown pit,round shaped,thin stem
+blackberries,plant,fruit,black skin,red inside,sweet flavor,small size
+blueberries,plant,fruit,blue skin,blue inside,sweet flavor,small size,round shaped
+cantaloupe,plant,fruit,green skin,yellow inside,sweet flavor,large size,seeds,yellow seeds,round shaped,thick stem
+star fruit,plant,fruit,yellow skin,yellow inside,sweet flavor,sour flavor,small size,seeds,brown seeds,thin stem
+cherimoya,plant,fruit,green skin,white inside,sweet flavor,medium size,seeds,black seeds,oval shaped,thin stem
+orange,plant,fruit,orange skin,orange inside,sweet flavor,sour flavor,medium size,seeds,white seeds,round shaped
+coconut,plant,fruit,brown skin,white inside,sour flavor,large size,round shaped
+cranberries,plant,fruit,red skin,red inside,sour flavor,small size,round shaped
+date,plant,fruit,brown skin,yellow inside,sweet flavor,small size,pit,brown pit,oval shaped
+durian ,plant,fruit,yellow skin,yellow inside,sweet flavor,large size,seeds,brown seeds,thick stem
+feijoa,plant,fruit,green skin,white inside,sweet flavor,sour flavor,medium size,seeds,white seeds,oval shaped,thin stem
+grapefruit,plant,fruit,orange skin,red inside,sour flavor,bitter flavor,medium size,seeds,white seeds,round shaped
+guava,plant,fruit,green skin,pink inside,sweet flavor,medium size,seeds,yellow seeds,round shaped,thin stem
+plum,plant,fruit,purple skin,yellow inside,sour flavor,small size,pit,brown pit,oval shaped,thin stem
+kiwi,plant,fruit,brown skin,green inside,sweet flavor,sour flavor,medium size,seeds,black seeds,oval shaped
+lemon,plant,fruit,yellow skin,yellow inside,sour flavor,medium size,seeds,white seeds,oval shaped
+lime,plant,fruit,green skin,green inside,sour flavor,medium size,seeds,white seeds,oval shaped
+longan,plant,fruit,yellow skin,white inside,sweet flavor,small size,pit,black pit,round shaped
+lychee,plant,fruit,red skin,white inside,sweet flavor,small size,pit,black pit,round shaped,thin stem
+mango,plant,fruit,yellow skin,yellow inside,sweet flavor,creamy flavor,medium size,pit,white pit,oval shaped
+mangosteen,plant,fruit,red skin,white inside,sweet flavor,sour flavor,medium size,seeds,brown seeds,round shaped,thick stem
+olives,plant,fruit,green skin,green inside,sweet flavor,bitter flavor,small size,pit,brown pit,oval shaped
+papaya,plant,fruit,yellow skin,orange inside,sweet flavor,sour flavor,medium size,seeds,black seeds,oval shaped,thick stem
+passion fruit,plant,fruit,green skin,yellow inside,sour flavor,medium size,seeds,black seeds,oval shaped,thin stem
+pear,plant,fruit,green skin,white inside,sweet flavor,medium size,seeds,black seeds,oval shaped,thin stem
+dragonfruit,plant,fruit,pink skin,white inside,sweet flavor,medium size,seeds,black seeds,oval shaped,thick stem
+pineapple,plant,fruit,yellow skin,yellow inside,sweet flavor,sour flavor,large size,seeds,black seeds,thick stem
+pomegranate,plant,fruit,red skin,red inside,sweet flavor,medium size,seeds,white seeds,round shaped,thick stem
+raspberries,plant,fruit,red skin,red inside,sweet flavor,sour flavor,small size,seeds,yellow seeds,oval shaped
+soursop,plant,fruit,green skin,white inside,sweet flavor,sour flavor,medium size,seeds,black seeds,thin stem
+strawberries,plant,fruit,red skin,red inside,sweet flavor,sour flavor,small size,seeds,white seeds,heart shaped
+sugar-apple,plant,fruit,green skin,white inside,sweet flavor,creamy flavor,medium size,seeds,black seeds,round shaped,thin stem
 
 #END OF FILE#

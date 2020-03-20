@@ -30,5 +30,52 @@
 26,eats cheese
 27,eaten by cats
 28,has four legs
+29,vegetable
+30,red skin
+31,red inside
+32,sour flavor
+33,medium size
+34,round shaped
+35,thin stem
+36,fruit
+37,yellow skin
+38,white  inside
+39,sweet flavor
+40,long shaped
+41,thick stem
+42,brown skin
+43,oval shaped
+44,green skin
+45,green inside
+46,large size
+47,seeds
+48,black seeds
+49,yellow inside
+50,leaf shaped
+51,white skin
+52,small size
+53,orange skin
+54,orange inside
+55,creamy flavor
+56,white seeds
+57,purple skin
+58,onion flavor
+59,bitter flavor
+60,heart shaped
+61,pit
+62,brown pit
+63,peppery flavor
+64,root shaped
+65,black skin
+66,white inside
+67,yellow seeds
+68,purple inside
+69,brown seeds
+70,blue skin
+71,blue inside
+72,pink inside
+73,black pit
+74,white pit
+75,pink skin
 
 #END OF FILE#

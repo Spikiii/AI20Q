@@ -45,4 +45,7 @@ buildDataBase()
 #printDataBase()
 
 oG = oGuesser.oGuesser(dataBase, charDictPath)
-oG.train()
+
+for i in range(0, 20):
+    oG.train()
+    print(oG.guessObject([1,29,30,31,32,33,34,35]))
