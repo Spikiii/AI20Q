@@ -1,0 +1,76 @@
+Name,Color (skin),color (inside),Flavors,Size,seed/fruit,Category,shape,stem
+tomato,red,red,sour,medium,NA,v,round,thin
+banana,yellow,white ,sweet,medium,NA,f,long,thick
+potato,brown,white ,NA,medium,NA,v,oval,NA
+cucumber,green,green,NA,medium,NA,v,long,NA
+watermellon,green,red,sweet,large,black,f,round,thick
+sweet potato,brown,yellow,sweet,medium,NA,v,long,NA
+lettuce,green,NA,NA,medium,NA,v,leaf,NA
+cabbage,green,NA,NA,medium,NA,v,round,NA
+cauliflower,white,NA, NA,medium,NA,v,NA,thick
+brussels sprout,green,NA,NA,small,NA,v,round,NA
+broccoli,green,NA,NA,medium,NA,v,NA,thick
+pumpkin,orange,orange,creamy,large,white,v,oval,thick
+egg plants ,purple,white ,NA,medium,white,v,round,thick
+corn,green,yellow,sweet,medium,NA,v,long,NA
+asparagus,green,NA,NA,small,NA,v,long,NA
+bamboo shoots,green,yellow,NA,medium,NA,v,long,NA
+green beans,green,NA,NA,small,green,v,long,NA
+onino,yellow,white ,onion-like taste,medium,NA,v,round,NA
+green onino,green,NA,onion-like taste,small,NA,v,long,NA
+beets,red,white ,sweet and bitter,small,NA,v,heart,thin
+carrot,orange,orange,NA,small,NA,v,long,NA
+avocado,green,green,creamy,medium,brown,f,oval,NA
+bok choy,green,NA,NA,medium,NA,v,leaf,NA
+celery,green,NA,NA,medium,NA,v,long,NA
+collards,green,NA,NA,medium,NA,v,leaf,NA
+daikon,white,white ,sweet,large,NA,v,long,thick
+edamame,green,NA,NA,small,green,v,long,thin
+ginger root,yellow,yellow,peppery,small,NA,v,root,NA
+kale,green,NA,NA,medium,NA,v,leaf,NA
+leek,green,NA,onion-like taste,medium,NA,v,long,thin
+mushroom,black,white,NA,small,NA,v,NA,NA
+okra,green,white,NA,small,white,v,long,thick
+peas,green,NA,NA,small,green,v,long,thin
+green pepper,green,NA,NA,medium,yellow,v,NA,thick
+spinach,green,NA,NA,small,NA,v,leaf,thin
+squash,orange,NA,creamy,large,white,v,NA,thick
+turnip,purple,white,sour,small,NA,v,heart,thin
+yam root,brown,white,sweet,medium,NA,v,long,thin
+zucchini,green,white,creamy,medium,white,v,long,thick
+grapes,purple,purple,sweet and sour,small,brown,f,round,thin
+cherry,red,red,sweet,small,brown,f,round,thin
+apple,red,yellow,sweet,medium,black,f,round,thin
+peach,yellow,white,sweet,medium,brown,f,round,thin
+blackberries,black,red,sweet,small,NA,f,NA,NA
+blueberries,blue,blue,sweet,small,NA,f,round,NA
+cantaloupe,green,yellow,sweet,large,yellow,f,round,thick
+carambola,yellow,yellow,sweet and sour,small,brown,f,NA,thin
+cherimoya,green,white,sweet,medium,black,f,oval,thin
+orange,orange,orange,sweet and sour,medium,white,f,round,NA
+coconut,brown,white,sour,large,NA,f,round,NA
+cranberries,red,red,sour,small,red,f,round,NA
+date fruit,brown,yellow,sweet,small,brown,f,oval,NA
+durian ,yellow,yellow,sweet,large,brown,f,NA,thick
+feijoa,green,white,sweet and sour,medium,white,f,oval,thin
+grapefruit,orange,red,sour and bitter,medium,white,f,round,NA
+guava,green,pink,sweet,medium,yellow,f,round,thin
+plum,purple,yellow,sour,small,red,f,oval,thin
+kiwi,brown,green,sweet and sour,medium,black,f,oval,NA
+lemon,yellow,yellow,sour,medium,white,f,oval,NA
+lime,green,green,sour,medium,white,f,oval,NA
+longan,yellow,white,sweet,small,black,f,round,NA
+lychee,red,white,sweet,small,black,f,round,thin
+mango,yellow,yellow,sweet and creamy,medium,white,f,oval,NA
+mangosteen,red,white,sweet and sour,medium,brown,f,round,thick
+olives,green,green,sweet and bitter,small,black,f,oval,NA
+papaya,yellow,orange,sweet and sour,medium,black,f,oval,thick
+passion fruit,green,yellow,sour,medium,black,f,oval,thin
+pear,green,white,sweet,medium,black,f,oval,thin
+dragonfruit,pink,white,sweet,medium,black,f,oval,thick
+pineapple,yellow,yellow,sweet and sour,large,black,f,NA,thick
+pomegranate,red,red,sweet,medium,white,f,round,thick
+raspberries,red,red,sweet and sour,small,yellow,f,oval,NA
+soursop,green,white,sweet and sour,medium,black,f,NA,thin
+strawberries,red,red,sweet and sour,small,white,f,heart,NA
+sugar-apple,green,white,sweet and creamy,medium,black,f,round,thin
