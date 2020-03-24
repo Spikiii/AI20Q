@@ -1,5 +1,5 @@
 def ui_screen():
-    mode = input("What mode do you want to use? 'Game' or 'Data'\n"); #figure out which user class this user is in
+    mode = input("What mode do you want to use? 'Game' or 'Data'\n") #figure out which user class this user is in
     if mode == "Game":
         input1 = input("Please enter your category: 'Animal', 'Plant', Mineral'\n") #determine
         if input1 == "Animal":
