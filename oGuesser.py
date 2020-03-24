@@ -4,6 +4,7 @@ import random as Rd
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import load_model
+from keras.optimizers import SGD
 import numpy as np
 from string import ascii_lowercase
 
@@ -15,7 +16,7 @@ class oGuesser:
 
     #Settings
     modelPath = "Models/oGuesser.h5"
-    vb = False #Verbose
+    vb = 2 #Verbose
 
     #Dictionaries
     chars = {} #Characteristics as {n:characteristic}
@@ -31,12 +32,11 @@ class oGuesser:
         model = load_model(modelPath)
     except:
         model = Sequential()
-        model.add(Dense(20, input_dim = 41, activation = "relu")) #We can screw around with these later
-        model.add(Dense(25, activation = "sigmoid")) #to figure out what works best for the model
-        model.add(Dense(25, activation = "relu"))
-        model.add(Dense(25, activation = "sigmoid"))
-        model.add(Dense(30, activation = "relu"))
-        model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
+        model.add(Dense(40, input_dim = 41, activation = "relu"))
+        model.add(Dense(35, activation="sigmoid"))
+        model.add(Dense(30, activation = "sigmoid"))
+        opt = SGD(lr = 0.000001, decay = 1e-6, momentum = 0.9, nesterov = True)
+        model.compile(loss = 'binary_crossentropy', optimizer = opt, metrics = ['accuracy'])
         model.save(modelPath)
 
     def __init__(self, dB, cD):
@@ -48,7 +48,6 @@ class oGuesser:
 
         #print(self.chars)
         #print(self.trainingData)
-
 
     def processData(self):
         """Processes the data into a format usable by training. This is called as part of initialization."""
@@ -80,7 +79,7 @@ class oGuesser:
                 randIndexes = Rd.sample(range(0, len(chs)), k = len(chs))
 
             for j in randIndexes:
-                charsRand.append(chs[j])
+                charsRand.append(chs[j] / (len(self.chars) - 1))
                 thsRand.append(tags[j].getTruth())
 
             self.trainingData.append([i.get(), i.getCat(), charsRand, thsRand])
@@ -132,8 +131,7 @@ class oGuesser:
                 self.chars[int(line[0])] = line[1]
                 self.revChars[line[1]] = int(line[0])
 
-
-    def train(self, epochs = 100):
+    def train(self, epochs = 1000):
         """Trains the model."""
         X = []
         y = []
@@ -177,13 +175,24 @@ class oGuesser:
         if(len(chars) > 41):
             chars = Rd.sample(chars, k = 41)
 
+        for i in range(0, len(chars)):
+            chars[i] = chars[i] / (len(self.chars) + 1)
+
         prediction = self.model.predict(np.array([chars]))
         predictionString = ""
+
+        for i in range(0, len(prediction[0])):
+            prediction[0][i] = round(prediction[0][i] * len(self.letters))
+            if (prediction[0][i] >= len(self.letters) - 1):
+                prediction[0][i] = len(self.letters) - 1
+            if (prediction[0][i] < 0):
+                prediction[0][i] = 0
 
         print(prediction)
 
         for i in prediction[0]:
-            predictionString = predictionString + self.letters[int(i)]
+            predictionString = predictionString + self.letters[i]
+
         return predictionString
 
     def getFeedback(self):
