@@ -47,7 +47,7 @@ def printDataBase():
         print(i.get(), i.getCat(), chars)
 
 def ui_screen():
-    """The introductory UI screen for the text-based version of the game. Used as part of playGame()."""
+    """The introductory UI screen for the text-based version of the game. Used as part of playGame(). """
 
     mode = input("What mode do you want to use? '[G]ame' or '[D]ata'\n") #figure out which user class this user is in
     mode = mode.lower()
