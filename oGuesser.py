@@ -1,11 +1,9 @@
-import dataNode as Dn
-import characteristic as Char
 import random as Rd
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import load_model
+from keras.optimizers import SGD
 import numpy as np
-from string import ascii_lowercase
 
 class oGuesser:
     #Initializations
@@ -15,7 +13,7 @@ class oGuesser:
 
     #Settings
     modelPath = "Models/oGuesser.h5"
-    vb = False #Verbose
+    vb = 0 #Verbose
 
     #Dictionaries
     chars = {} #Characteristics as {n:characteristic}
@@ -31,12 +29,12 @@ class oGuesser:
         model = load_model(modelPath)
     except:
         model = Sequential()
-        model.add(Dense(20, input_dim = 41, activation = "relu")) #We can screw around with these later
-        model.add(Dense(25, activation = "sigmoid")) #to figure out what works best for the model
-        model.add(Dense(25, activation = "relu"))
-        model.add(Dense(25, activation = "sigmoid"))
-        model.add(Dense(30, activation = "relu"))
-        model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
+        model.add(Dense(40, input_dim = 41, activation = "relu"))
+        model.add(Dense(35, activation="sigmoid"))
+        model.add(Dense(30, activation = "sigmoid"))
+
+        opt = SGD(lr = 0.000001, decay = 1e-6, momentum = 0.9, nesterov = True)
+        model.compile(loss = 'binary_crossentropy', optimizer = opt, metrics = ['accuracy'])
         model.save(modelPath)
 
     def __init__(self, dB, cD):
@@ -48,7 +46,6 @@ class oGuesser:
 
         #print(self.chars)
         #print(self.trainingData)
-
 
     def processData(self):
         """Processes the data into a format usable by training. This is called as part of initialization."""
@@ -80,7 +77,7 @@ class oGuesser:
                 randIndexes = Rd.sample(range(0, len(chs)), k = len(chs))
 
             for j in randIndexes:
-                charsRand.append(chs[j])
+                charsRand.append(chs[j] / (len(self.chars) - 1))
                 thsRand.append(tags[j].getTruth())
 
             self.trainingData.append([i.get(), i.getCat(), charsRand, thsRand])
@@ -132,8 +129,7 @@ class oGuesser:
                 self.chars[int(line[0])] = line[1]
                 self.revChars[line[1]] = int(line[0])
 
-
-    def train(self, epochs = 100):
+    def train(self, epochs = 1000):
         """Trains the model."""
         X = []
         y = []
@@ -154,37 +150,75 @@ class oGuesser:
             characters = []  # Creating Y data
             for j in i[0]:
                 characters.append(self.revLetters[j])
-            if(len(characters) < 30):  # Making sure that the rest of characters is filled with 0s.
+            if(len(characters) < 30):  # Making sure that the rest of characters is filled with spaces.
                 for j in range(len(characters), 30):
-                    characters.append(0)
+                    characters.append(self.revLetters[" "])
 
             X.append(row)
             y.append(characters)
 
-        #print(X)
-        #print(np.shape(X))
-        #print(y)
-        #print(np.shape(y))
-
         self.model.fit(np.array(X), np.array(y), epochs = epochs, verbose = self.vb)
         self.model.save(self.modelPath)
 
-    def guessObject(self, chars):
+    def guessObject(self, g):
         """Guesses an object based on a characteristic array passed in. Will be updated to accept gameStates when those are implemented."""
-        if (len(chars) < 41):  # Making sure that chars is of the correct length
+
+        chars = []
+        charsRaw = g.getChars()
+
+        #Get the category and add it to the start of the array
+        try:
+            chars.append(self.revCats[g.getCategory().lower()])
+        except:
+            print("::Error in category name::")
+            chars.append(3) #Assumes its an 'other' if there's an error
+
+        #Build the rest of chars, and convert them into numbers
+        for i in charsRaw:
+            try:
+                chars.append(self.revChars[i.get()]) #Adding in the characteristic's ID
+                if(i.getTruth()): #Adding in the characteristic's truth value
+                    chars.append(1)
+                else:
+                    chars.append(0)
+            except:
+                self.chars[len(self.chars)] = i.get()
+                self.revChars[i.get()] = len(self.revChars)
+                self.saveChars()
+
+                chars.append(self.revChars[i.get()]) #Do the same as ^
+                if (i.getTruth()):
+                    chars.append(1)
+                else:
+                    chars.append(0)
+
+        #Makes sure that chars is of the correct length [<20 characteristics]
+        if (len(chars) < 41):
             for j in range(len(chars), 41):
                 chars.append(0)
         if(len(chars) > 41):
             chars = Rd.sample(chars, k = 41)
 
+        #Normalizing the characteristic values
+        for i in range(0, len(chars)):
+            chars[i] = chars[i] / (len(self.chars) + 1)
+
         prediction = self.model.predict(np.array([chars]))
         predictionString = ""
 
-        print(prediction)
+        #Converting the prediction into integers for the letter dictionary
+        for i in range(0, len(prediction[0])):
+            prediction[0][i] = round(prediction[0][i] * len(self.letters))
+            if (prediction[0][i] >= len(self.letters) - 1):
+                prediction[0][i] = len(self.letters) - 1
+            if (prediction[0][i] < 0):
+                prediction[0][i] = 0
 
+        #print(prediction)
+
+        #Turning the prediction into a string
         for i in prediction[0]:
-            predictionString = predictionString + self.letters[int(i)]
-        return predictionString
+            predictionString = predictionString + self.letters[i]
 
-    def getFeedback(self):
-        """Asks the user for feedback after an object is guessed."""
+        g.addObj(prediction)
+        return predictionString
