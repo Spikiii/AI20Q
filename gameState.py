@@ -18,7 +18,14 @@ class gameState:
         return self.category
 
     def addChar(self, char):#adds a characteristic to the list
+<<<<<<< HEAD
         charsKnown.append(char)
 
     def addObj(self, object):#adds an object to the list of
         objectsGuessed.append(object)
+=======
+        self.chars.append(char)
+
+    def addObj(self, object):#adds an object to the list of 
+        self.objects.append(object)
+>>>>>>> 9bbf9c1a61350dc50f27077d89eba40954634962
