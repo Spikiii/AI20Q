@@ -275,6 +275,7 @@ spider,!has hair,!has feather,lays eggs,!produce milk,!can fly,!live in water,a 
 snail,!has hair,!has feather,lays eggs,!produce milk,!can fly,!live in water,!a predator,!has teeth,!has backbone,breath in the air,!poisonous,!has fins,!has legs,!has tail,!is domestic,!is catsize,has legs,!has four legs,!has six legs,!has eight legs,!mammal,!bird,!reptile,!fish,!amphibian,!bug,invertebrate
 silkworm,!has hair,!has feather,lays eggs,!produce milk,!can fly,!live in water,!a predator,!has teeth,!has backbone,breath in the air,!poisonous,!has fins,!has legs,!has tail,!is domestic,!is catsize,has legs,!has four legs,!has six legs,!has eight legs,!mammal,!bird,!reptile,!fish,!amphibian,!bug,invertebrate
 jellyfish,!has hair,!has feather,lays eggs,!produce milk,!can fly,live in water,!a predator,!has teeth,!has backbone,!breath in the air,poisonous,!has fins,!has legs,!has tail,!is domestic,is catsize,has legs,!has four legs,!has six legs,!has eight legs,!mammal,!bird,!reptile,!fish,!amphibian,!bug,invertebrate
-squid,!has hair,!has feather,lays eggs,!produce milk,!can fly,live in water,!a predator,!has teeth,!has backbone,!breath in the air,!poisonous,!has fins,!has legs,!has tail,!is domestic,is catsize,has legs,!has four legs,!has six legs,!has eight legs,!mammal,!bird,!reptile,!fish,!amphibian,!bug,invertebrate
+squid,!has hair,!has feather,lays eggs,!produce milk,!can fly,live in water,!a predator,!has teeth,!has backbone,!breath in the air,!poisonous,!has fins,!has legs,!has tail,!is domestic,is catsize,has legs,!has four legs,!has six legs,!has eight legs,!mammal,!bird,!reptile,!fish,!amphibian,!bug,invertebrate 
+
 
 #END OF FILE#
