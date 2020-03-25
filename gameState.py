@@ -18,7 +18,7 @@ class gameState:
         return self.category
 
     def addChar(self, char):#adds a characteristic to the list
-        chars.append(char)
+        self.chars.append(char)
 
     def addObj(self, object):#adds an object to the list of 
-        objects.append(object)
+        self.objects.append(object)
