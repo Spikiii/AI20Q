@@ -1,6 +1,7 @@
 #Data set
 #other name,category,char1,char2,...
 #Categories: animal,plant,mineral,other
+#animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,twolegs,fourlegs,sixlegs,eightlegs,mammal,bird,reptile,fish,amphibian,bug,invertebrate
 
 duck,animal,living,larger than breadbox,can walk,can fly,can swim,lays eggs,!mammal,!rodent,bird,!has fur,has feathers,eats bread,eats bugs,lives in nest,lives in pond,has beak,has bill,has wings,has legs,can float,has webbed feet
 mouse,animal,smaller than breadbox,can walk,!can fly,!can swim,!lays eggs,mammal,rodent,!bird,has fur,!has feathers,eats bread,lives in mouse hole,!has wings,has tail,has ears,gives live birth,eats cheese,eaten by cats,!has webbed feet,has four legs
@@ -128,9 +129,6 @@ toaster,other,cook,hot,bread,heat,warm,electricity,bake
 vacuum cleaner,other,suck up,clean,loud,electricity,chore
 washer,other,cleans clothes,wet,water,laundry,loud
 dryer,other,laundry,drys clothes,dry,heat,air,hot,warm
-
-#Zoodata
-#animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,twolegs,fourlegs,sixlegs,eightlegs,mammal,bird,reptile,fish,amphibian,bug,invertebrate
 
 aardvark,has hair,!has feather,!lays eggs,produce milk,!can fly,!live in water,a predator,has teeth,has backbone,breath in the air,!poisonous,!has fins,has legs,!has tail,!is domestic,is catsize,has legs,has four legs,!has six legs,!has eight legs,mammal,!bird,!reptile,!fish,!amphibian,!bug,!invertebrate
 antelope,has hair,!has feather,!lays eggs,produce milk,!can fly,!live in water,!a predator,has teeth,has backbone,breath in the air,!poisonous,!has fins,has legs,has tail,!is domestic,is catsize,has legs,has four legs,!has six legs,!has eight legs,mammal,!bird,!reptile,!fish,!amphibian,!bug,!invertebrate
