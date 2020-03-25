@@ -18,8 +18,8 @@ ui_screen()
 game = gameState(input1) #keeps track of the game's state
 questions = 0 #keeps track of number of questions asked
 playing = true #keeps track of whether the player is still playing
-#picker = cPicker()        TODO
-#builder = qBuilder()       TODO
+picker = cPicker()
+builder = qBuilder()       
 while(playing):
     questions++ # increment questions
     char = picker.getChar(gameState) #get the characteristic to check about this round
@@ -34,3 +34,4 @@ while(playing):
 
     if questions = 20:
         playing = false
+print("Thank you for playing!")
