@@ -1,6 +1,7 @@
 import random as Rd
 from keras.models import Sequential
 from keras.layers import Dense
+from keras.layers import Dropout
 from keras.models import load_model
 from keras.optimizers import SGD
 import numpy as np
@@ -13,7 +14,7 @@ class oGuesser:
 
     #Settings
     modelPath = "Models/oGuesser.h5"
-    vb = 2 #Verbose
+    vb = 0 #Verbose
 
     #Dictionaries
     chars = {} #Characteristics as {n:characteristic}
@@ -32,6 +33,7 @@ class oGuesser:
         model.add(Dense(40, input_dim = 41, activation = "relu"))
         model.add(Dense(35, activation="sigmoid"))
         model.add(Dense(30, activation = "sigmoid"))
+
         opt = SGD(lr = 0.000001, decay = 1e-6, momentum = 0.9, nesterov = True)
         model.compile(loss = 'binary_crossentropy', optimizer = opt, metrics = ['accuracy'])
         model.save(modelPath)
@@ -149,17 +151,12 @@ class oGuesser:
             characters = []  # Creating Y data
             for j in i[0]:
                 characters.append(self.revLetters[j])
-            if(len(characters) < 30):  # Making sure that the rest of characters is filled with 0s.
+            if(len(characters) < 30):  # Making sure that the rest of characters is filled with spaces.
                 for j in range(len(characters), 30):
-                    characters.append(0)
+                    characters.append(self.revLetters[" "])
 
             X.append(row)
             y.append(characters)
-
-        #print(X)
-        #print(np.shape(X))
-        #print(y)
-        #print(np.shape(y))
 
         self.model.fit(np.array(X), np.array(y), epochs = epochs, verbose = self.vb)
         self.model.save(self.modelPath)
