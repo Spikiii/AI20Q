@@ -1,5 +1,6 @@
 #Data set
-#object name,category,char1,char2,...
+#other name,category,char1,char2,...
+#Categories: animal, plant, mineral, other
 
 duck,animal,living,larger than breadbox,can walk,can fly,can swim,lays eggs,!mammal,!rodent,bird,!has fur,has feathers,eats bread,eats bugs,lives in nest,lives in pond,has beak,has bill,has wings,has legs,can float,has webbed feet
 mouse,animal,smaller than breadbox,can walk,!can fly,!can swim,!lays eggs,mammal,rodent,!bird,has fur,!has feathers,eats bread,lives in mouse hole,!has wings,has tail,has ears,gives live birth,eats cheese,eaten by cats,!has webbed feet,has four legs
@@ -78,5 +79,54 @@ raspberries,plant,fruit,red skin,red inside,sweet flavor,sour flavor,small size,
 soursop,plant,fruit,green skin,white inside,sweet flavor,sour flavor,medium size,seeds,black seeds,thin stem
 strawberries,plant,fruit,red skin,red inside,sweet flavor,sour flavor,small size,seeds,white seeds,heart shaped
 sugar-apple,plant,fruit,green skin,white inside,sweet flavor,creamy flavor,medium size,seeds,black seeds,round shaped,thin stem
+air conditioner, other, cold air, has a fan, removes heat, removes moisture, dehumidify, evaporative, ice, freeze, cold
+baking tray, other, bread, baker, flat, oven, used to bake, cooking
+couch, other, cushion, chair, sat on, sit, wide, soft
+table, other, four-legged, flat, rectangular, square, circular, hard
+television, other, flat-screen, wires, shows, movies, entertainment
+chair, other, cushion, sat on, sit, four-legged, wooden, metal
+reclining chair, other, recline, sat on, sit, chair
+sofa, other, cushion, couch, comfortable, couch, wide, sink into, chair
+door, other, rectangular, entrance, doorknob, peephole, wooden, knock, handle
+fridge, other, cold, freeze, food, door, organization, storage
+bookshelf, other, book, shelf, layers, organization, storage
+drawer, other, organization, storage, clothes, withdraw, pants, handle
+lamp, other, brightness, light, bright, bulb, electricity, vision
+heater, other, heat, hot, not cold, electricity
+whiteboard, other, white, erase, marker, draw
+hanger, other, clothes, pants, jacket, organization, storage, triangular
+closet, other, clothes, jacket, pants, organization, storage, rectangular, door, handle
+baby items, other, baby, baby food, child, safe
+bed, other, sleep, rectangular, comfortable, pillow, bed frame, nighttime, rest
+bedframe, other
+blanket, other
+bedding, other
+linen towels, other
+blender, other
+mixer, other
+book, other
+wardrobe, other
+cabinet, other
+curtain, other
+shower, other
+bathtub, other
+drapes, other
+glass, other
+cup, other
+bowl, other
+ironing board, other
+fan, other
+microwave, other
+rugs, other
+fork, other
+knife, other
+spoon, other
+plate, other
+stereo, other
+radio, other
+toaster, other
+vacuum cleaner, other
+washer, other
+dryer, other
 
 #END OF FILE#
