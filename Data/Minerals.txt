@@ -1,0 +1,50 @@
+air conditioner, object, cold air, has a fan, removes heat, removes moisture, dehumidify, evaporative, ice, freeze, cold
+baking tray, object, bread, baker, flat, oven, used to bake, cooking
+couch, object, cushion, chair, sat on, sit, wide, soft
+table, object, four-legged, flat, rectangular, square, circular, hard
+television, object, flat-screen, wires, shows, movies, entertainment
+chair, object, cushion, sat on, sit, four-legged, wooden, metal
+reclining chair, object, recline, sat on, sit, chair, 
+sofa, object, cushion, couch, comfortable, couch, wide, sink into, chair,
+door, object, rectangular, entrance, doorknob, peephole, wooden, knock, handle
+fridge, object, cold, freeze, food, door, organization, storage
+bookshelf, object, book, shelf, layers, organization, storage
+drawer, object, organization, storage, clothes, withdraw, pants, handle
+lamp, object, brightness, light, bright, bulb, electricity, vision
+heater, object, heat, hot, not cold, electricity, 
+whiteboard, object, white, erase, marker, draw
+hanger, object, clothes, pants, jacket, organization, storage, triangular
+closet, object, clothes, jacket, pants, organization, storage, rectangular, door, handle
+baby items, object, baby, baby food, child, safe
+bed, object, sleep, rectangular, comfortable, pillow, bed frame, nighttime, rest
+bedframe, object
+blanket, object
+bedding, object
+linen towels, object
+blender, object
+mixer, object
+book, object
+wardrobe, object
+cabinet, object
+curtain, object
+shower, object,
+bathtub, object, 
+drapes, object
+glass, object, 
+cup, object
+bowl, object, 
+ironing board, object, 
+fan, object, 
+microwave, object, 
+rugs, object,
+fork, object
+knife, object
+spoon, object
+plate, object
+stereo, object
+radio, object
+toaster, object
+vacuum cleaner, object
+washer, object
+dryer, object, 
+
