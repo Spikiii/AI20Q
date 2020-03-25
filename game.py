@@ -114,6 +114,7 @@ def playGame():
 
         if questions == 19:
             print("I think it is a [" + oG.guessObject(game) + "]")
+            input("Is this correct? [y/n]\n")
             playing = False
 
     print("Thank you for playing!")
