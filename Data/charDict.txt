@@ -77,5 +77,162 @@
 73,black pit
 74,white pit
 75,pink skin
+76,cold air
+77,has a fan
+78,removes heat
+79,removes moisture
+80,dehumidify
+81,evaporative
+82,ice
+83,freeze
+84,cold
+85,bread
+86,baker
+87,flat
+88,oven
+89,used to bake
+90,cooking
+91,cushion
+92,chair
+93,sat on
+94,sit
+95,wide
+96,soft
+97,four-legged
+98,rectangular
+99,square
+100,circular
+101,hard
+102,flat-screen
+103,wires
+104,shows
+105,movies
+106,entertainment
+107,wooden
+108,metal
+109,recline
+110,couch
+111,comfortable
+112,sink into
+113,entrance
+114,doorknob
+115,peephole
+116,knock
+117,handle
+118,food
+119,door
+120,organization
+121,storage
+122,book
+123,shelf
+124,layers
+125,clothes
+126,withdraw
+127,pants
+128,brightness
+129,light
+130,bright
+131,bulb
+132,electricity
+133,vision
+134,heat
+135,hot
+136,not cold
+137,white
+138,erase
+139,marker
+140,draw
+141,jacket
+142,triangular
+143,baby
+144,baby food
+145,child
+146,safe
+147,sleep
+148,pillow
+149,bed frame
+150,nighttime
+151,rest
+152,bed
+153,warm
+154,fuzzy
+155,cover
+156,dry
+157,towel
+158,shower
+159,wet
+160,sharp
+161,mix
+162,drink
+163,blend
+164,fast
+165,combine
+166,read
+167,boring
+168,words
+169,paper
+170,homework
+171,closet
+172,drawer
+173,hanger
+174,blockage
+175,string
+176,bathtub
+177,hidden
+178,privacy
+179,wrinkled
+180,clean
+181,water
+182,standing
+183,bathroom
+184,plug
+185,drain
+186,curtain
+187,wine
+188,fancy
+189,breakable
+190,container
+191,stores beverages
+192,holds liquid
+193,liquid
+194,stores food
+195,plastic
+196,glass
+197,gets rid of wrinkles
+198,iron
+199,blades
+200,air
+201,freezing
+202,spin
+203,makes food hot
+204,cooks food
+205,floor
+206,walked on
+207,three prongs
+208,utensil
+209,eat
+210,stab
+211,used to eat
+212,used to poke
+213,dangerous
+214,cut
+215,kitchen
+216,round
+217,soup
+218,more quantity
+219,used to carry
+220,sound
+221,music
+222,radio
+223,communication
+224,songs
+225,cook
+226,bake
+227,suck up
+228,loud
+229,chore
+230,cleans clothes
+231,laundry
+232,drys clothes
 
 #END OF FILE#

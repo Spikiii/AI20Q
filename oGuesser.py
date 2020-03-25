@@ -1,6 +1,7 @@
 import random as Rd
 from keras.models import Sequential
 from keras.layers import Dense
+from keras.layers import Dropout
 from keras.models import load_model
 from keras.optimizers import SGD
 import numpy as np
@@ -13,7 +14,7 @@ class oGuesser:
 
     #Settings
     modelPath = "Models/oGuesser.h5"
-    vb = 2 #Verbose
+    vb = 0 #Verbose
 
     #Dictionaries
     chars = {} #Characteristics as {n:characteristic}
@@ -32,6 +33,7 @@ class oGuesser:
         model.add(Dense(40, input_dim = 41, activation = "relu"))
         model.add(Dense(35, activation="sigmoid"))
         model.add(Dense(30, activation = "sigmoid"))
+
         opt = SGD(lr = 0.000001, decay = 1e-6, momentum = 0.9, nesterov = True)
         model.compile(loss = 'binary_crossentropy', optimizer = opt, metrics = ['accuracy'])
         model.save(modelPath)
@@ -149,17 +151,12 @@ class oGuesser:
             characters = []  # Creating Y data
             for j in i[0]:
                 characters.append(self.revLetters[j])
-            if(len(characters) < 30):  # Making sure that the rest of characters is filled with 0s.
+            if(len(characters) < 30):  # Making sure that the rest of characters is filled with spaces.
                 for j in range(len(characters), 30):
-                    characters.append(0)
+                    characters.append(self.revLetters[" "])
 
             X.append(row)
             y.append(characters)
-
-        #print(X)
-        #print(np.shape(X))
-        #print(y)
-        #print(np.shape(y))
 
         self.model.fit(np.array(X), np.array(y), epochs = epochs, verbose = self.vb)
         self.model.save(self.modelPath)
@@ -167,20 +164,50 @@ class oGuesser:
     def guessObject(self, g):
         """Guesses an object based on a characteristic array passed in. Will be updated to accept gameStates when those are implemented."""
 
-        chars = g.getChars()
+        chars = []
+        charsRaw = g.getChars()
 
-        if (len(chars) < 41):  # Making sure that chars is of the correct length
+        #Get the category and add it to the start of the array
+        try:
+            chars.append(self.revCats[g.getCategory()])
+        except:
+            print("::Error in category name::")
+            chars.append(3) #Assumes its an 'other' if there's an error
+
+        #Build the rest of chars, and convert them into numbers
+        for i in charsRaw:
+            try:
+                chars.append(self.revChars[i.get()]) #Adding in the characteristic's ID
+                if(i.getTruth()): #Adding in the characteristic's truth value
+                    chars.append(1)
+                else:
+                    chars.append(0)
+            except:
+                self.chars[len(self.chars)] = i.get()
+                self.revChars[i.get()] = len(self.revChars)
+                self.saveChars()
+
+                chars.append(self.revChars[i.get()]) #Do the same as ^
+                if (i.getTruth()):
+                    chars.append(1)
+                else:
+                    chars.append(0)
+
+        #Makes sure that chars is of the correct length [<20 characteristics]
+        if (len(chars) < 41):
             for j in range(len(chars), 41):
                 chars.append(0)
         if(len(chars) > 41):
             chars = Rd.sample(chars, k = 41)
 
+        #Normalizing the characteristic values
         for i in range(0, len(chars)):
             chars[i] = chars[i] / (len(self.chars) + 1)
 
         prediction = self.model.predict(np.array([chars]))
         predictionString = ""
 
+        #Converting the prediction into integers for the letter dictionary
         for i in range(0, len(prediction[0])):
             prediction[0][i] = round(prediction[0][i] * len(self.letters))
             if (prediction[0][i] >= len(self.letters) - 1):
@@ -190,11 +217,9 @@ class oGuesser:
 
         print(prediction)
 
+        #Turning the prediction into a string
         for i in prediction[0]:
             predictionString = predictionString + self.letters[i]
 
         g.addObj(prediction)
         return predictionString
-
-    def getFeedback(self):
-        """Asks the user for feedback after an object is guessed."""
