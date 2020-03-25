@@ -1,12 +1,9 @@
-import dataNode as Dn
-import characteristic as Char
 import random as Rd
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import load_model
 from keras.optimizers import SGD
 import numpy as np
-from string import ascii_lowercase
 
 class oGuesser:
     #Initializations
@@ -167,8 +164,11 @@ class oGuesser:
         self.model.fit(np.array(X), np.array(y), epochs = epochs, verbose = self.vb)
         self.model.save(self.modelPath)
 
-    def guessObject(self, chars):
+    def guessObject(self, g):
         """Guesses an object based on a characteristic array passed in. Will be updated to accept gameStates when those are implemented."""
+
+        chars = g.getChars()
+
         if (len(chars) < 41):  # Making sure that chars is of the correct length
             for j in range(len(chars), 41):
                 chars.append(0)
@@ -193,6 +193,7 @@ class oGuesser:
         for i in prediction[0]:
             predictionString = predictionString + self.letters[i]
 
+        g.addObj(prediction)
         return predictionString
 
     def getFeedback(self):
