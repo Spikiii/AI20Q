@@ -5,8 +5,10 @@ class gameState:
     objects = []
     category = ""
 
-    def __init__(self, cat = ""):
+    def __init__(self, cat = "", chs = [], objs = []):
         self.category = cat
+        self.chars = chs
+        self.objects = objs
 
     def getChars(self):#return the charsGuessed
         return self.chars
