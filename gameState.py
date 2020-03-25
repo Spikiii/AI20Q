@@ -1,30 +1,33 @@
-import dataNode
-
 class gameState:
+    category = ""
     charsKnown = []
     objectsGuessed = []
-    category = ""
 
     def __init__(self, cat = "", chs = [], objs = []):
         self.category = cat
-        self.chars = chs
-        self.objects = objs
+        self.charsKnown = chs
+        self.objectsGuessed = objs
 
-    def getChars(self):#return the chars known
-        return self.charsKnown
-
-    def getObjs(self):#returns the list of objects guessed so far
-        return self.objectsGuessed
-
-    def getCategory(self):#gets the category of the game
+    def getCategory(self):
+        """Gets the category of the game."""
         return self.category
 
-    def addChar(self, char):#adds a characteristic to the list
-        charsKnown.append(char)
+    def setCategory(self, cat):
+        """Sets the category of the game."""
+        self.category = cat
 
-    def addObj(self, object):#adds an object to the list of
-        objectsGuessed.append(object)
-        self.chars.append(char)
+    def getChars(self):
+        """Gets the known characteristics."""
+        return self.charsKnown
 
-    def addObj(self, object):#adds an object to the list of
-        self.objects.append(object)
+    def addChar(self, char):
+        """Adds a characteristic to the known characteristics list."""
+        self.charsKnown.append(char)
+
+    def getObjs(self):
+        """Gets the objects that have been guessed so far."""
+        return self.objectsGuessed
+
+    def addObj(self, obj):
+        """Adds an object to the guessed objects list."""
+        self.objectsGuessed.append(obj)
