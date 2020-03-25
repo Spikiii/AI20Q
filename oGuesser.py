@@ -169,7 +169,7 @@ class oGuesser:
 
         #Get the category and add it to the start of the array
         try:
-            chars.append(self.revCats[g.getCategory()])
+            chars.append(self.revCats[g.getCategory().lower()])
         except:
             print("::Error in category name::")
             chars.append(3) #Assumes its an 'other' if there's an error
