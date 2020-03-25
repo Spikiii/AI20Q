@@ -1,7 +1,6 @@
 import random as Rd
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.layers import Dropout
 from keras.models import load_model
 from keras.optimizers import SGD
 import numpy as np
@@ -215,7 +214,7 @@ class oGuesser:
             if (prediction[0][i] < 0):
                 prediction[0][i] = 0
 
-        print(prediction)
+        #print(prediction)
 
         #Turning the prediction into a string
         for i in prediction[0]:

@@ -91,12 +91,10 @@ def playGame():
     ui_screen()
     questions = 0  # keeps track of number of questions asked
     playing = True  # keeps track of whether the player is still playing
-    picker = cP.cPicker()
-    builder = qB.qBuilder()
     while (playing):
         questions += 1  # increment questions
-        char = picker.getChar(game)  # get the characteristic to check about this round
-        ans = input(builder.getQuestion(char) + " [y/n]\n")  # builds a question and asks the user
+        char = cP.getChar(game)  # get the characteristic to check about this round
+        ans = input(qB.getQuestion(char) + " [y/n]\n")  # builds a question and asks the user
         entering = True
         while (entering):
             if ans == "y":  # set the truth value of the  characteristic
@@ -108,21 +106,27 @@ def playGame():
             else:
                 print("Please enter [y] or [n].")
                 print("")
-                ans = input(builder.getQuestion(char) + " [y/n]\n")
+                ans = input(qB.getQuestion(char) + " [y/n]\n")
 
         game.addChar(char)  # update the gamestate
 
         ## TODO: guess if we have a high enough confidence value
 
-        if questions == 20:
+        if questions == 19:
+            print("I think it is a [" + oG.guessObject(game) + "]")
             playing = False
+
     print("Thank you for playing!")
 
 buildDataBase()
 #printDataBase()
 
 oG = oG.oGuesser(dataBase, charDictPath)
+cP = cP.cPicker(dataBase, charDictPath)
+qB = qB.qBuilder()
 
-for i in range(0, 20):
-    oG.train()
-    print(oG.guessObject(gS.gameState("plant", [ch("vegetable"),ch("red skin"),ch("red inside"),ch("sour flavor"),ch("medium size"),ch("round shaped"),ch("thin stem")])))
+playGame()
+
+#for i in range(0, 20):
+#    oG.train()
+#    print(oG.guessObject(gS.gameState("plant", [ch("vegetable"),ch("red skin"),ch("red inside"),ch("sour flavor"),ch("medium size"),ch("round shaped"),ch("thin stem")])))
