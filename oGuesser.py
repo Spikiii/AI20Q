@@ -14,6 +14,7 @@ class oGuesser:
     #Settings
     modelPath = "Models/oGuesser.h5"
     vb = 0 #Verbose
+    bs = 10 #Batch size
 
     #Dictionaries
     chars = {} #Characteristics as {n:characteristic}
@@ -30,10 +31,9 @@ class oGuesser:
     except:
         model = Sequential()
         model.add(Dense(40, input_dim = 41, activation = "relu"))
-        model.add(Dense(35, activation="sigmoid"))
         model.add(Dense(30, activation = "sigmoid"))
 
-        opt = SGD(lr = 0.000001, decay = 1e-6, momentum = 0.9, nesterov = True)
+        opt = SGD(lr = 0.000001, decay = 1e-6, momentum = 0.9, nesterov = True, clipvalue = 0.5)
         model.compile(loss = 'binary_crossentropy', optimizer = opt, metrics = ['accuracy'])
         model.save(modelPath)
 
@@ -129,7 +129,7 @@ class oGuesser:
                 self.chars[int(line[0])] = line[1]
                 self.revChars[line[1]] = int(line[0])
 
-    def train(self, epochs = 1000):
+    def train(self, epochs = 50):
         """Trains the model."""
         X = []
         y = []
@@ -157,7 +157,9 @@ class oGuesser:
             X.append(row)
             y.append(characters)
 
-        self.model.fit(np.array(X), np.array(y), epochs = epochs, verbose = self.vb)
+        hist = self.model.fit(np.array(X), np.array(y), batch_size = self.bs, epochs = epochs, verbose = self.vb, validation_split = 0.4)
+        print(hist.history['accuracy'][-1])
+
         self.model.save(self.modelPath)
 
     def guessObject(self, g):
@@ -214,7 +216,7 @@ class oGuesser:
             if (prediction[0][i] < 0):
                 prediction[0][i] = 0
 
-        #print(prediction)
+        print(prediction)
 
         #Turning the prediction into a string
         for i in prediction[0]:
