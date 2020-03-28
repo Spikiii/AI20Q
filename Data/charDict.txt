@@ -234,24 +234,24 @@
 230,cleans clothes
 231,laundry
 232,drys clothes
-233,has feather
-234,produce milk
-235,live in water
-236,a predator
-237,has teeth
-238,has backbone
-239,breath in the air
-240,poisonous
-241,has fins
-242,is domestic
-243,is catsize
-244,has six legs
-245,has eight legs
-246,reptile
-247,fish
-248,amphibian
-249,bug
-250,invertebrate
-251,invertebrate 
+233,has hair
+234,has feather
+235,produce milk
+236,live in water
+237,a predator
+238,has teeth
+239,has backbone
+240,breath in the air
+241,poisonous
+242,has fins
+243,is domestic
+244,is catsize
+245,has six legs
+246,has eight legs
+247,reptile
+248,fish
+249,amphibian
+250,bug
+251,invertebrate
 
 #END OF FILE#
