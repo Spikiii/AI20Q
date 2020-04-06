@@ -130,6 +130,7 @@ qB = qB.qBuilder()
 
 #playGame()
 
-#for i in range(0, 20):
-#    oG.train()
-#    print(oG.guessObject(gS.gameState("plant", [ch("vegetable"),ch("red skin"),ch("red inside"),ch("sour flavor"),ch("medium size"),ch("round shaped"),ch("thin stem")])))
+for i in range(0,500):
+    oG.train()
+    print("Test with 'Tomato':", oG.guessObject(gS.gameState("plant", [ch("vegetable"),ch("red skin"),ch("red inside"),ch("sour flavor"),ch("medium size"),ch("round shaped"),ch("thin stem")])))
+    print()

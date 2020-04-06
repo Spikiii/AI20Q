@@ -4,7 +4,7 @@ class characteristic:
     aliases = []
 
     def __init__(self, cn = "", tv = True, als = []):
-        self.charName = cn
+        self.charName = cn.lower()
         self.truthVal = tv
         self.aliases = als
 
