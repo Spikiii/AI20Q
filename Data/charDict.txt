@@ -253,5 +253,70 @@
 249,amphibian
 250,bug
 251,invertebrate
+252,no bar in flag
+253,3 stripes in the flag
+254,5 colors in the flag
+255,has red in flag
+256,has green in flag
+257,has blue in flag
+258,has yellow in flag
+259,has white in flag
+260,has black in flag
+261,has orange or brown in flag
+262,main flag color is green
+263,has circle in the flag
+264,has sun or star in the flag
+265,has crescent moon symbol in flag
+266,has triangle in flag
+267,has text in flag
+268,in north america
+269,in south america
+270,in europe
+271,in africa
+272,in asia
+273,in oceania
+274,in north eastern hemisphere
+275,in south eastern hemisphere
+276,in south western hemisphere
+277,in north western hemisphere
+278,larger than united states
+279,larger than united kingdom
+280,larger than turkey
+281,more than 100 million people
+282,speak english
+283,speak spanish
+284,speak french
+285,speak german
+286,speak chinese
+287,speak arabic
+288,no stripe in the flag
+289,3 colors in the flag
+290,main flag color is red
+291,2 bar in flag
+292,main flag color is blue
+293,3 bar in flag
+294,main flag color is gold
+295,2 stripes in the flag
+296,1 stripe in the flag
+297,main flag color is white
+298,2 colors in the flag
+299,8 colors in the flag
+300,6 colors in the flag
+301,4 colors in the flag
+302,main flag color is orange
+303,5 stripes in the flag
+304,1 bar in flag
+305,main flag color is black
+306,7 colors in the flag
+307,9 stripes in the flag
+308,1 stripe in the flag1 stripe in the flag
+309,1 color in the flag
+310,1 stripe in the flag4 stripes in the flag
+311,4 stripes in the flag
+312,main flag color is brown
+313,5 bar in flag
+314,6 stripes in the flag
+315,1 stripe in the flag3 stripes in the flag
+316,7 stripes in the flag
 
 #END OF FILE#
