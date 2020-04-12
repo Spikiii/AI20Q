@@ -54,19 +54,28 @@ class dataNode:
             else:
                 chs.append(i.get())
 
-    def calcSim(self, n):
-        """Calculates the similarities between this dataNode and another dataNode, n."""
-        sim = 0.0 #Similarity, ranges from 0.0 (no shared tags) to 1.0 (all shared tags)
+    def __cSim(self, n):
+        """calcSim is a wrapper method for this method."""
+        sim = 0.0  # Similarity, ranges from 0.0 (no shared tags) to 1.0 (all shared tags)
         ntags = n.getTags()
 
         for i in ntags:
-            if(i in self.chars):
+            if (i in self.chars):
                 sim += 1.0
         for i in self.chars:
-            if(i in ntags):
+            if (i in ntags):
                 sim += 1.0
         sim = sim / (ntags.length() + self.chars.length())
-        self.similarities[n] = sim
+        self.similarities[n.get()] = sim
+
+    def calcSim(self, dns):
+        """Calculates the similarities between this dataNode and another dataNode, dns. You can pass in either a single dataNode or a list of dataNodes."""
+        if(type(dns) is list):
+            for i in dns:
+                self.__cSim(i)
+        if(type(dns) is dataNode):
+            self.__cSim(dns)
+        self.remDupes()
 
     def getSims(self):
         """Returns this dataNode's similarities. """
