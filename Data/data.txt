@@ -4,7 +4,7 @@
 #animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,twolegs,fourlegs,sixlegs,eightlegs,mammal,bird,reptile,fish,amphibian,bug,invertebrate
 
 duck,animal,living,larger than breadbox,can walk,can fly,can swim,lays eggs,!mammal,!rodent,bird,!has fur,has feathers,eats bread,eats bugs,lives in nest,lives in pond,has beak,has bill,has wings,has legs,can float,has webbed feet
-mouse,animal,smaller than breadbox,can walk,!can fly,!can swim,!lays eggs,mammal,rodent,!bird,has fur,!has feathers,eats bread,lives in mouse hole,!has wings,has tail,has ears,gives live birth,eats cheese,eaten by cats,!has webbed feet,has four legs
+mouse,animal,living,smaller than breadbox,can walk,!can fly,!can swim,!lays eggs,mammal,rodent,!bird,has fur,!has feathers,eats bread,lives in mouse hole,!has wings,has tail,has ears,gives live birth,eats cheese,eaten by cats,!has webbed feet,has four legs
 tomato,plant,vegetable,red skin,red inside,sour flavor,medium size,round shaped,thin stem
 banana,plant,fruit,yellow skin,white  inside,sweet flavor,medium size,long shaped,thick stem
 potato,plant,vegetable,brown skin,white  inside,medium size,oval shaped

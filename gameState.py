@@ -1,11 +1,22 @@
+import characteristic as cs
+
 class gameState:
     category = ""
     charsKnown = []
     objectsGuessed = []
 
     def __init__(self, cat = "", chs = [], objs = []):
+        if(type(chs) is str): #If row pulled directly from data
+            chars = str.split(chs,",")
+            for i in chars:
+                if(i[0] == "!"):
+                    self.charsKnown += [cs.characteristic(i, False)]
+                else:
+                    self.charsKnown += [cs.characteristic(i, True)]
+        else: #If list of characteristics passed in
+            self.charsKnown = chs
+
         self.category = cat
-        self.charsKnown = chs
         self.objectsGuessed = objs
 
     def getCategory(self):

@@ -57,15 +57,18 @@ class dataNode:
     def __cSim(self, n):
         """calcSim is a wrapper method for this method."""
         sim = 0.0  # Similarity, ranges from 0.0 (no shared tags) to 1.0 (all shared tags)
-        ntags = n.getTags()
+        chs = [self.category]
+        chs += self.chars
+        ntags = [n.getCat()]
+        ntags += n.getTags()
 
         for i in ntags:
-            if (i in self.chars):
+            if (i in chs):
                 sim += 1.0
-        for i in self.chars:
+        for i in chs:
             if (i in ntags):
                 sim += 1.0
-        sim = sim / (ntags.length() + self.chars.length())
+        sim = sim / (len(self.chars) + len(ntags))
         self.similarities[n.get()] = sim
 
     def calcSim(self, dns):
