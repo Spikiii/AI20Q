@@ -18,19 +18,19 @@ class qBuilder:
         qType = char.getQType()
         if(qType == 0):
             question = "Is your object "+char.get()+"?"
-        else if(qType == 1):
+        elif(qType == 1):
             question = "Can your object "+char.get()+"?"
-        else if(qType == 2):
+        elif(qType == 2):
             question = "Does your object "+char.get()+"?"
-        else if(qType == 3):
+        elif(qType == 3):
             question = "Is your object a "+char.get()+"?"
-        else if(qType == 4):
+        elif(qType == 4):
             question = "Does your object have "+char.get()+"?"
-        else if(qType == 5):
+        elif(qType == 5):
             question = "Is your object related to "+char.get()+"?";
-        else if(qType == 6):
+        elif(qType == 6):
             question = "Is your object a type of "+char.get()+"?";
-        else if(qType == 7):
+        elif(qType == 7):
             question = "Can you "+char.get()+" your object?";
         else:
             question = "Does your object have the property of "+char.get()+""

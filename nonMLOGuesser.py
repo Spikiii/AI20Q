@@ -22,7 +22,7 @@ class oGuesser:
             self.dataBase.append(dN.dataNode(i.get().lower(), i.getCat(), i.getTags()))
         self.charDictPath = cD
 
-        self.buildChars()
+        #self.buildChars()
 
     def buildChars(self):
         """Builds a characteristic dictionary from the database."""
