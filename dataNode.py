@@ -5,12 +5,14 @@ class dataNode:
     category = ""
     chars = []
     similarities = {}
+    qType
 
-    def __init__(self, nm = "", cat = "Other", chs = [], sims = {}):
+    def __init__(self, nm = "", cat = "Other", chs = [], sims = {},qTyped):
         self.name = nm
         self.category = cat
         self.chars = chs
         self.similarities = {}
+        self.qType = qTyped
 
     def get(self):
         """Gets the name of this dataNode."""
@@ -40,6 +42,10 @@ class dataNode:
         if(type(chs) is characteristic):
             self.chars.append(chs)
         self.remDupes()
+
+    def getQType(self):
+        """returns the question type of the object"""
+        return self.qType
 
     def remTag(self, ch):
         """Removes the specified characteristic tag. Make sure that ch is a characteristic."""
