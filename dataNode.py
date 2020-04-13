@@ -5,9 +5,9 @@ class dataNode:
     category = ""
     chars = []
     similarities = {}
-    qType
+    qType = ""
 
-    def __init__(self, nm = "", cat = "Other", chs = [], sims = {},qTyped):
+    def __init__(self, nm = "", cat = "Other", chs = [], sims = {}, qTyped = ""):
         self.name = nm
         self.category = cat
         self.chars = chs
@@ -44,8 +44,12 @@ class dataNode:
         self.remDupes()
 
     def getQType(self):
-        """returns the question type of the object"""
+        """Returns the question type of the object"""
         return self.qType
+
+    def setQType(self, q):
+        """Sets the question type of the object."""
+        self.qType = q
 
     def remTag(self, ch):
         """Removes the specified characteristic tag. Make sure that ch is a characteristic."""
