@@ -107,7 +107,7 @@ mixer,other,blend,mix,drink,blend,fast,sharp,combine
 book,other,read,boring,rectangular,words,paper,entertainment,homework
 wardrobe,other,clothes,closet,door,rectangular,handle,drawer,storage,organization
 cabinet,other,clothes,storage,organization,hanger,handle,door,rectangular
-shower curtain,other,shower,blockage,string,bathtub,cover,hidden,privacy,wrinkled
+shower curtain,other,shower,blockage,string,bathtub cover,hidden,privacy,wrinkled
 shower,other,wet,clean,water,bathtub,standing,bathroom
 bathtub,other,water,clean,wet,plug,drain,bathroom
 drapes,other,curtain,blockage,hidden,privacy,string,bathroom
