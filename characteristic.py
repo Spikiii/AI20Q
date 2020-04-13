@@ -1,12 +1,14 @@
 class characteristic:
     charName = ""
     truthVal = True
+    qType = 0
     aliases = []
 
-    def __init__(self, cn = "", tv = True, als = []):
+    def __init__(self, cn = "", tv = True, als = [], qTyped = 0):
         self.charName = cn.lower()
         self.truthVal = tv
         self.aliases = als
+        self.qType = qTyped
 
     def get(self):
         """Gets this characteristic's name."""
@@ -31,3 +33,11 @@ class characteristic:
     def addAlias(self, a):
         """Adds a new alias to this characteristic"""
         self.aliases.append(a)
+
+    def getQType(self):
+        """Returns the question type of the object"""
+        return self.qType
+
+    def setQType(self, q):
+        """Sets the question type of the object."""
+        self.qType = q

@@ -10,7 +10,7 @@ class gameState:
             chars = str.split(chs,",")
             for i in chars:
                 if(i[0] == "!"):
-                    self.charsKnown += [cs.characteristic(i, False)]
+                    self.charsKnown += [cs.characteristic(i[1:], False)]
                 else:
                     self.charsKnown += [cs.characteristic(i, True)]
         else: #If list of characteristics passed in

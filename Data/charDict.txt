@@ -1,5 +1,5 @@
 #Character Dictionary
-#Don't touch this please. The model will need to retrain if you do.
+#ID,characteristic
 
 0,living
 1,larger than breadbox
@@ -177,146 +177,147 @@
 173,hanger
 174,blockage
 175,string
-176,bathtub
+176,bathtub cover
 177,hidden
 178,privacy
 179,wrinkled
 180,clean
 181,water
-182,standing
-183,bathroom
-184,plug
-185,drain
-186,curtain
-187,wine
-188,fancy
-189,breakable
-190,container
-191,stores beverages
-192,holds liquid
-193,liquid
-194,stores food
-195,plastic
-196,glass
-197,gets rid of wrinkles
-198,iron
-199,blades
-200,air
-201,freezing
-202,spin
-203,makes food hot
-204,cooks food
-205,floor
-206,walked on
-207,three prongs
-208,utensil
-209,eat
-210,stab
-211,used to eat
-212,used to poke
-213,dangerous
-214,cut
-215,kitchen
-216,round
-217,soup
-218,more quantity
-219,used to carry
-220,sound
-221,music
-222,radio
-223,communication
-224,songs
-225,cook
-226,bake
-227,suck up
-228,loud
-229,chore
-230,cleans clothes
-231,laundry
-232,drys clothes
-233,has hair
-234,has feather
-235,produce milk
-236,live in water
-237,a predator
-238,has teeth
-239,has backbone
-240,breath in the air
-241,poisonous
-242,has fins
-243,is domestic
-244,is catsize
-245,has six legs
-246,has eight legs
-247,reptile
-248,fish
-249,amphibian
-250,bug
-251,invertebrate
-252,no bar in flag
-253,3 stripes in the flag
-254,5 colors in the flag
-255,has red in flag
-256,has green in flag
-257,has blue in flag
-258,has yellow in flag
-259,has white in flag
-260,has black in flag
-261,has orange or brown in flag
-262,main flag color is green
-263,has circle in the flag
-264,has sun or star in the flag
-265,has crescent moon symbol in flag
-266,has triangle in flag
-267,has text in flag
-268,in north america
-269,in south america
-270,in europe
-271,in africa
-272,in asia
-273,in oceania
-274,in north eastern hemisphere
-275,in south eastern hemisphere
-276,in south western hemisphere
-277,in north western hemisphere
-278,larger than united states
-279,larger than united kingdom
-280,larger than turkey
-281,more than 100 million people
-282,speak english
-283,speak spanish
-284,speak french
-285,speak german
-286,speak chinese
-287,speak arabic
-288,no stripe in the flag
-289,3 colors in the flag
-290,main flag color is red
-291,2 bar in flag
-292,main flag color is blue
-293,3 bar in flag
-294,main flag color is gold
-295,2 stripes in the flag
-296,1 stripe in the flag
-297,main flag color is white
-298,2 colors in the flag
-299,8 colors in the flag
-300,6 colors in the flag
-301,4 colors in the flag
-302,main flag color is orange
-303,5 stripes in the flag
-304,1 bar in flag
-305,main flag color is black
-306,7 colors in the flag
-307,9 stripes in the flag
-308,1 stripe in the flag1 stripe in the flag
-309,1 color in the flag
-310,1 stripe in the flag4 stripes in the flag
-311,4 stripes in the flag
-312,main flag color is brown
-313,5 bar in flag
-314,6 stripes in the flag
-315,1 stripe in the flag3 stripes in the flag
-316,7 stripes in the flag
+182,bathtub
+183,standing
+184,bathroom
+185,plug
+186,drain
+187,curtain
+188,wine
+189,fancy
+190,breakable
+191,container
+192,stores beverages
+193,holds liquid
+194,liquid
+195,stores food
+196,plastic
+197,glass
+198,gets rid of wrinkles
+199,iron
+200,blades
+201,air
+202,freezing
+203,spin
+204,makes food hot
+205,cooks food
+206,floor
+207,walked on
+208,three prongs
+209,utensil
+210,eat
+211,stab
+212,used to eat
+213,used to poke
+214,dangerous
+215,cut
+216,kitchen
+217,round
+218,soup
+219,more quantity
+220,used to carry
+221,sound
+222,music
+223,radio
+224,communication
+225,songs
+226,cook
+227,bake
+228,suck up
+229,loud
+230,chore
+231,cleans clothes
+232,laundry
+233,drys clothes
+234,has hair
+235,has feather
+236,produce milk
+237,live in water
+238,a predator
+239,has teeth
+240,has backbone
+241,breath in the air
+242,poisonous
+243,has fins
+244,is domestic
+245,is catsize
+246,has six legs
+247,has eight legs
+248,reptile
+249,fish
+250,amphibian
+251,bug
+252,invertebrate
+253,no bar in flag
+254,3 stripes in the flag
+255,5 colors in the flag
+256,has red in flag
+257,has green in flag
+258,has blue in flag
+259,has yellow in flag
+260,has white in flag
+261,has black in flag
+262,has orange or brown in flag
+263,main flag color is green
+264,has circle in the flag
+265,has sun or star in the flag
+266,has crescent moon symbol in flag
+267,has triangle in flag
+268,has text in flag
+269,in north america
+270,in south america
+271,in europe
+272,in africa
+273,in asia
+274,in oceania
+275,in north eastern hemisphere
+276,in south eastern hemisphere
+277,in south western hemisphere
+278,in north western hemisphere
+279,larger than united states
+280,larger than united kingdom
+281,larger than turkey
+282,more than 100 million people
+283,speak english
+284,speak spanish
+285,speak french
+286,speak german
+287,speak chinese
+288,speak arabic
+289,no stripe in the flag
+290,3 colors in the flag
+291,main flag color is red
+292,2 bar in flag
+293,main flag color is blue
+294,3 bar in flag
+295,main flag color is gold
+296,2 stripes in the flag
+297,1 stripe in the flag
+298,main flag color is white
+299,2 colors in the flag
+300,8 colors in the flag
+301,6 colors in the flag
+302,4 colors in the flag
+303,main flag color is orange
+304,5 stripes in the flag
+305,1 bar in flag
+306,main flag color is black
+307,7 colors in the flag
+308,9 stripes in the flag
+309,1 stripe in the flag1 stripe in the flag
+310,1 color in the flag
+311,1 stripe in the flag4 stripes in the flag
+312,4 stripes in the flag
+313,main flag color is brown
+314,5 bar in flag
+315,6 stripes in the flag
+316,1 stripe in the flag3 stripes in the flag
+317,7 stripes in the flag
 
 #END OF FILE#

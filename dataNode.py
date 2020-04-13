@@ -5,14 +5,12 @@ class dataNode:
     category = ""
     chars = []
     similarities = {}
-    qType = ""
 
-    def __init__(self, nm = "", cat = "Other", chs = [], sims = {}, qTyped = ""):
+    def __init__(self, nm = "", cat = "Other", chs = [], sims = {}):
         self.name = nm
         self.category = cat
         self.chars = chs
         self.similarities = {}
-        self.qType = qTyped
 
     def get(self):
         """Gets the name of this dataNode."""
@@ -43,14 +41,6 @@ class dataNode:
             self.chars.append(chs)
         self.remDupes()
 
-    def getQType(self):
-        """Returns the question type of the object"""
-        return self.qType
-
-    def setQType(self, q):
-        """Sets the question type of the object."""
-        self.qType = q
-
     def remTag(self, ch):
         """Removes the specified characteristic tag. Make sure that ch is a characteristic."""
         self.chars.remove(ch)
@@ -67,18 +57,28 @@ class dataNode:
     def __cSim(self, n):
         """calcSim is a wrapper method for this method."""
         sim = 0.0  # Similarity, ranges from 0.0 (no shared tags) to 1.0 (all shared tags)
-        chs = [self.category]
-        chs += self.chars
-        ntags = [n.getCat()]
-        ntags += n.getTags()
 
+        #Making self's characteristic array
+        chs = []
+        chs.append(self.category)
+        for i in self.chars:
+            chs.append(i.get())
+
+        #Making n's characteristic array
+        ntags = []
+        ntags.append(n.getCat())
+        for i in n.getTags():
+            ntags.append(i.get())
+
+        #Comparison and calculation
         for i in ntags:
             if (i in chs):
-                sim += 1.0
+                sim += 1
         for i in chs:
             if (i in ntags):
-                sim += 1.0
-        sim = sim / (len(self.chars) + len(ntags))
+                sim += 1
+        sim = sim / (len(self.chars) + len(ntags) + 1)
+
         self.similarities[n.get()] = sim
 
     def calcSim(self, dns):

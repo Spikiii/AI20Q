@@ -13,6 +13,7 @@ dataBase = []
 #Settings
 dataPath = "data/data.txt"
 charDictPath = "data/charDict.txt"
+confidenceGuess = 0.8 #Controls the confidence that the AI is willing to guess at
 
 def loadData(dP = dataPath):
     """Loads the data specified at dataPath."""
@@ -74,84 +75,110 @@ def printDataBase():
                 chars.append("!" + j.get())
         print(i.get(), i.getCat(), chars)
 
+def playGame():
+    """Starts the game, and controls the overarching gameplay logic."""
+    exitCode = None
+    while(exitCode is None):
+        exitCode = mainMenu()
+        print("")
+
 def mainMenu():
-    """The introductory UI screen for the text-based version of the game. Used as part of playGame(). """
+    """The introductory UI screen for the text-based version of the game."""
+    print("Welcome to 20 Questions!")
+    print("Enter [q]uit at any point to exit.")
+    print("")
     print("What mode do you want to use? '[G]ame' or '[D]ata'")
     mode = input("> ") #figure out which user class this user is in
     mode = mode.lower()
     modeSelecting = True
     while(modeSelecting):
-        if mode == "data" or mode == "d":
-            print("This feature isn't implemented yet, but it will be in the future.")
-            print("Please select '[G]ame' for this demo.")
-            print("")
-            mode = input("What mode do you want to use? '[G]ame' or '[D]ata'")
-        elif mode == "game" or mode == "g":
+        if mode == "game" or mode == "g":
             modeSelecting = False
             print("Please enter your category: '[A]nimal', '[P]lant', '[M]ineral', or '[O]ther'.")
-            input1 = input("> ")
-            input1 = input1.lower()
+            input1 = str.lower(input("> "))
             categorySelecting = True
             while(categorySelecting):
                 if input1 == "animal" or input1 == "a":
                     categorySelecting = False
                     game.setCategory("animal")
+                    play20Q()
                 elif input1 == "plant" or input1 == "p":
                     categorySelecting = False
                     game.setCategory("plant")
+                    play20Q()
                 elif input1 == "mineral" or input1 == "m":
                     categorySelecting = False
                     game.setCategory("mineral")
+                    play20Q()
                 elif input1 == "other" or input1 == "o":
                     categorySelecting = False
                     game.setCategory("other")
+                    play20Q()
+                elif input1 == "quit" or input1 == "q":
+                    return "EXIT"
                 else:
                     print("Please enter a valid category.")
-                    input1 = input("> ")
+                    input1 = str.lower(input("> "))
                     print("")
+        elif mode == "data" or mode == "d":
+            print("This feature isn't implemented yet, but it will be in the future.")
+            print("Please select '[G]ame' for this demo.")
+            print("")
+            return
+        elif mode == "quit" or mode == "q":
+            return "EXIT"
         else:
             print("Please enter a valid mode.")
-            mode = input("> ")
+            mode = str.lower(input("> "))
             print("")
 
-def playGame():
+def play20Q():
     """Plays the game!"""
-
-    mainMenu()
     questions = 0  # keeps track of number of questions asked
     playing = True  # keeps track of whether the player is still playing
-    while (playing):
+    while (playing and questions <= 19):
         questions += 1  # increment questions
-        char = cP.getChar(game)  # get the characteristic to check about this round
-        print(qB.getQuestion(char) + " [y/n]")
-        ans = input("> ")  # builds a question and asks the user
-        entering = True
-        while (entering):
-            if ans == "y":  # set the truth value of the  characteristic
-                char.setTruth(True)
-                entering = False
-            elif ans == "n":
-                char.setTruth(False)
-                entering = False
-            else:
-                print("Please enter [y] or [n].")
-                ans = input("> ")
+        guess = oG.guessObject(game)
 
-        game.addChar(char)  # update the gameState
+        if(guess[1] >= confidenceGuess or questions == 20):
+            print(str(questions) + ". I think it is a [" + guess[0] + "]")
+            print("Is this correct? [y/n]")
+            ans = str.lower(input("> "))
+            entering = True
+            while(entering):
+                if(ans == "y" or ans == "yes"):
+                    playing = False
+                    entering = False
+                elif(ans == "n" or ans == "no"):
+                    entering = False
+                elif(ans == "quit" or ans == "q"):
+                    return
+                else:
+                    print("Please enter [y] or [n].")
+                    ans = str.lower(input("> "))
+        else:
+            char = cP.getChar(game)  # get the characteristic to check about this round
+            print(str(questions) + ". " + qB.getQuestion(char) + " [y/n]")
+            ans = str.lower(input("> "))  # builds a question and asks the user
+            entering = True
+            while (entering):
+                if ans == "y" or ans == "yes":  # set the truth value of the  characteristic
+                    char.setTruth(True)
+                    entering = False
+                elif ans == "n" or ans == "no":
+                    char.setTruth(False)
+                    entering = False
+                elif ans == "quit" or ans == "q":
+                    return
+                else:
+                    print("Please enter [y] or [n].")
+                    ans = str.lower(input("> "))
 
-        ## TODO: guess if we have a high enough confidence value
-
-        if questions == 19:
-            guess = oG.guessObject(game)
-            print("I think it is a [" + guess[0] + "]")
-            input("Is this correct? [y/n]\n")
-            playing = False
+            game.addChar(char)  # update the gameState
 
     print("Thank you for playing!")
-    return guess
 
 loadData()
-saveData()
 
 #Game initializations
 oG = oG.oGuesser(dataBase, charDictPath)
@@ -159,7 +186,7 @@ cP = cP.cPicker(dataBase, charDictPath)
 qB = qB.qBuilder()
 game = Gs.gameState()
 
-#playGame()
+playGame()
 
 #for i in range(0,1):
 #    oG.train()

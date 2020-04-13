@@ -22,7 +22,7 @@ class oGuesser:
             self.dataBase.append(dN.dataNode(i.get().lower(), i.getCat(), i.getTags()))
         self.charDictPath = cD
 
-        #self.buildChars()
+        self.buildChars()
 
     def buildChars(self):
         """Builds a characteristic dictionary from the database."""
@@ -42,7 +42,7 @@ class oGuesser:
 
         with open(self.charDictPath, "w") as f:
             f.writelines("#Character Dictionary\n")
-            f.write("#Don't touch this please. The model will need to retrain if you do.\n")
+            f.write("#ID,characteristic\n")
             f.write("\n")
             for i in chs:
                 f.write(str(i[0]) + "," + str(i[1]) + "\n")
