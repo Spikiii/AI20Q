@@ -1,10 +1,9 @@
 import dataNode as Dn
 import characteristic as Char
-import oGuesser as oG
+#import oGuesser as oG
 import gameState as Gs
 import cPicker as cP
 import qBuilder as qB
-#import oGuesser as oG
 import nonMLOGuesser as oG
 
 #Initializations

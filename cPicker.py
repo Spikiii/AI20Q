@@ -44,4 +44,3 @@ class cPicker:
                 GChar = i.get()
         picked = char.characteristic(GChar, True, self.chars[GChar][1])  #Gets a random characteristic from the characteristic dictionary
         return picked
-        #TODO, above is demo code
