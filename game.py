@@ -394,7 +394,6 @@ def play20Q():
     while (playing and questions <= 19):
         questions += 1  # increment questions
         guess = oG.guessObject(game)
-        print(guess)
 
         if((guess[1] >= confidenceGuess and questions >= minQuestions and guess[0] not in game.getObjs()) or questions == 20):
             print(str(questions) + ". I think it is a [" + guess[0] + "]")
