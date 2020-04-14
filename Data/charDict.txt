@@ -315,5 +315,7 @@
 311,electric,-1
 312,used to type,-1
 313,used with computer,-1
+314,furry,-1
+315,4 legs,-1
 
 #END OF FILE#
