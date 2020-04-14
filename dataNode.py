@@ -62,13 +62,19 @@ class dataNode:
         chs = []
         chs.append(self.category)
         for i in self.chars:
-            chs.append(i.get())
+            if(i.getTruth()):
+                chs.append(i.get())
+            else:
+                chs.append("!" + i.get())
 
         #Making n's characteristic array
         ntags = []
         ntags.append(n.getCat())
         for i in n.getTags():
-            ntags.append(i.get())
+            if(i.getTruth()):
+                ntags.append(i.get())
+            else:
+                ntags.append("!" + i.get())
 
         #Comparison and calculation
         for i in ntags:
