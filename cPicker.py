@@ -19,6 +19,7 @@ class cPicker:
     #Dictionaries
     chars = {}  # Characteristics as {n:characteristic}
     revChars = {}  # Characteristics as {characteristic:n}
+    qTypes = {} # Dictionary linking {characteristic:qType}
 
     #Setting stuff up for Keras
     model = []
@@ -78,6 +79,7 @@ class cPicker:
                 line = i.split(",")
                 self.chars[int(line[0])] = line[1]
                 self.revChars[line[1]] = int(line[0])
+                self.qTypes[line[1]] = int(line[2])
 
     def getChar(self, gameState):
         """Gets a characteristic to ask about."""
@@ -90,6 +92,7 @@ class cPicker:
             return char.characteristic("precious")
         else:
             return char.characteristic("living")"""
-        return char.characteristic(Rd.choice(list(self.revChars.keys()))) #Gets a random characteristic from the characteristic dictionary
-
+        picked = char.characteristic(Rd.choice(list(self.revChars.keys()))) #Gets a random characteristic from the characteristic dictionary
+        picked.setQType(chars[picked.get()])
+        return picked
         #TODO, above is demo code
