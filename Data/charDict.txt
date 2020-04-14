@@ -143,37 +143,37 @@
 139,draw,2
 140,jacket,6
 141,triangular,0
-142,a baby,0
-143,baby food,6
-144,a child,0
-145,safe,0
-146,sleep,5
-147,pillow,5
-148,bed frame,6
-149,nighttime,5
-150,rest,5
+142,hangers,5
+143,closets,5
+144,a baby,0
+145,baby food,6
+146,a child,0
+147,safe,0
+148,sleep,5
+149,pillow,5
+150,bed frame,6
 151,beds,5
-152,warm,0
-153,fuzzy,0
-154,cover,6
-155,dry,1
-156,towels,5
-157,showers,5
-158,wet,0
-159,sharp,0
-160,mix,1
-161,drink,7
-162,blend,7
-163,fast,0
-164,combine,7
-165,read,7
-166,boring,0
-167,words,4
-168,paper,4
-169,homework,5
-170,closets,5
-171,drawers,5
-172,hangers,5
+152,nighttime,5
+153,rest,5
+154,warm,0
+155,fuzzy,0
+156,cover,6
+157,dry,1
+158,towels,5
+159,showers,5
+160,wet,0
+161,sharp,0
+162,mix,1
+163,drink,7
+164,blend,7
+165,fast,0
+166,combine,7
+167,read,7
+168,boring,0
+169,words,4
+170,paper,4
+171,homework,5
+172,drawers,5
 173,blockage,6
 174,a string,4
 175,bathtub cover,-1
@@ -225,94 +225,95 @@
 221,radio,5
 222,communication,5
 223,songs,5
-224,cooked,0
-225,bake,0
-226,suck up,1
-227,loud,0
-228,chore,6
-229,clean clothes,2
-230,laundry,5
-231,dry clothes,2
-232,hair,4
-233,produce milk,2
-234,live in water,2
-235,a predator,0
-236,teeth,4
-237,a backbone,4
-238,breath in the air,2
-239,poisonous,0
-240,fins,4
-241,domestic,0
-242,cat sized,0
-243,six legs,4
-244,eight legs,4
-245,a reptile,0
-246,a fish,0
-247,an amphibian,0
-248,a bug,0
-249,an invertebrate,0
-250,no bar in flag,4
-251,3 stripes in the flag,4
-252,5 colors in the flag,4
-253,red in flag,4
-254,green in flag,4
-255,blue in flag,4
-256,yellow in flag,4
-257,white in flag,4
-258,black in flag,4
-259,orange or brown in flag,4
-260,main flag color is green,0
-261,circle in the flag,3
-262,sun or star in the flag,3
-263,crescent moon symbol in flag,3
-264,triangle in flag,3
-265,text in flag,4
-266,in north america,0
-267,in south america,0
-268,in europe,0
-269,in africa,0
-270,in asia,0
-271,in oceania,0
-272,in north eastern hemisphere,0
-273,in south eastern hemisphere,0
-274,in south western hemisphere,0
-275,in north western hemisphere,0
-276,larger than united states,0
-277,larger than united kingdom,0
-278,larger than turkey,0
-279,more than 100 million people,4
-280,speak english,2
-281,speak spanish,2
-282,speak french,2
-283,speak german,2
-284,speak chinese,2
-285,speak arabic,2
-286,no stripe in the flag,4
-287,3 colors in the flag,4
-288,main flag color is red,4
-289,2 bar in flag,4
-290,main flag color is blue,4
-291,3 bar in flag,4
-292,main flag color is gold,4
-293,2 stripes in the flag,4
-294,1 stripe in the flag,4
-295,main flag color is white,4
-296,2 colors in the flag,4
-297,8 colors in the flag,4
-298,6 colors in the flag,4
-299,4 colors in the flag,4
-300,main flag color is orange,4
-301,5 stripes in the flag,4
-302,1 bar in flag,4
-303,main flag color is black,4
-304,7 colors in the flag,4
-305,9 stripes in the flag,4
-306,1 color in the flag,4
-307,3 stripe in the flag,4
-308,4 stripes in the flag,4
-309,main flag color is brown,4
-310,5 bar in flag,4
-311,6 stripes in the flag,4
-312,7 stripes in the flag,4
+224,bake,0
+225,suck up,1
+226,loud,0
+227,chore,6
+228,clean clothes,2
+229,laundry,5
+230,dry clothes,2
+231,produce milk,2
+232,live in water,2
+233,a predator,0
+234,teeth,4
+235,a backbone,4
+236,breath in the air,2
+237,poisonous,0
+238,fins,4
+239,domestic,0
+240,cat sized,0
+241,six legs,4
+242,eight legs,4
+243,a reptile,0
+244,a fish,0
+245,an amphibian,0
+246,a bug,0
+247,an invertebrate,0
+248,no bar in flag,4
+249,3 stripes in the flag,4
+250,5 colors in the flag,4
+251,red in flag,4
+252,green in flag,4
+253,blue in flag,4
+254,yellow in flag,4
+255,white in flag,4
+256,black in flag,4
+257,orange or brown in flag,4
+258,main flag color is green,0
+259,circle in the flag,3
+260,sun or star in the flag,3
+261,crescent moon symbol in flag,3
+262,triangle in flag,3
+263,text in flag,4
+264,in north america,0
+265,in south america,0
+266,in europe,0
+267,in africa,0
+268,in asia,0
+269,in oceania,0
+270,in north eastern hemisphere,0
+271,in south eastern hemisphere,0
+272,in south western hemisphere,0
+273,in north western hemisphere,0
+274,larger than united states,0
+275,larger than united kingdom,0
+276,larger than turkey,0
+277,more than 100 million people,4
+278,speak english,2
+279,speak spanish,2
+280,speak french,2
+281,speak german,2
+282,speak chinese,2
+283,speak arabic,2
+284,no stripe in the flag,4
+285,3 colors in the flag,4
+286,main flag color is red,4
+287,2 bar in flag,4
+288,main flag color is blue,4
+289,3 bar in flag,4
+290,main flag color is gold,4
+291,2 stripes in the flag,4
+292,1 stripe in the flag,4
+293,main flag color is white,4
+294,2 colors in the flag,4
+295,8 colors in the flag,4
+296,6 colors in the flag,4
+297,4 colors in the flag,4
+298,main flag color is orange,4
+299,5 stripes in the flag,4
+300,1 bar in flag,4
+301,main flag color is black,4
+302,7 colors in the flag,4
+303,9 stripes in the flag,4
+304,1 color in the flag,4
+305,4 stripes in the flag,4
+306,main flag color is brown,4
+307,5 bar in flag,4
+308,6 stripes in the flag,4
+309,7 stripes in the flag,4
+310,buttons,-1
+311,electric,-1
+312,used to type,-1
+313,used with computer,-1
 
 #END OF FILE#
