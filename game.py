@@ -40,7 +40,7 @@ def loadData(cDP = charDictPath, dP = dataPath):
     for i in rawCharDict:
         if(i != "" and i[0] != "#"): #Ignores any line that has a # at its start or is empty
             line = i.split(",")
-            charDict[line[1]] = (line[0], line[2])
+            charDict[line[1]] = (int(line[0]), int(line[2]))
 
     #Reads through the data file line by line
     with open(dP, "r") as f:
@@ -77,7 +77,7 @@ def saveData(cPD = charDictPath, dP = dataPath):
     #Converts everything in qDict to a string format for export
     count = 0
     for i in charDict.keys():
-        charLines.append(str(count) + "," + i + "," + charDict[i][1])
+        charLines.append(str(count) + "," + i + "," + str(charDict[i][1]))
         count += 1
 
     #Write charLines into cPD
@@ -141,36 +141,11 @@ def mainMenu():
     while(modeSelecting):
         if mode == "game" or mode == "g":
             modeSelecting = False
-            print("Please enter your category: '[A]nimal', '[P]lant', '[M]ineral', or '[O]ther'.")
-            input1 = str.lower(input("> "))
-            categorySelecting = True
-            while(categorySelecting):
-                if input1 == "animal" or input1 == "a":
-                    categorySelecting = False
-                    game.setCategory("animal")
-                    play20Q()
-                elif input1 == "plant" or input1 == "p":
-                    categorySelecting = False
-                    game.setCategory("plant")
-                    play20Q()
-                elif input1 == "mineral" or input1 == "m":
-                    categorySelecting = False
-                    game.setCategory("mineral")
-                    play20Q()
-                elif input1 == "other" or input1 == "o":
-                    categorySelecting = False
-                    game.setCategory("other")
-                    play20Q()
-                elif input1 == "quit" or input1 == "q":
-                    return "EXIT"
-                else:
-                    print("Please enter a valid category.")
-                    input1 = str.lower(input("> "))
-                    print("")
+            play20Q()
+            return
         elif mode == "data" or mode == "d":
-            print("This feature isn't implemented yet, but it will be in the future.")
-            print("Please select '[G]ame' for this demo.")
-            print("")
+            modeSelecting = False
+            dataMode()
             return
         elif mode == "quit" or mode == "q":
             return "EXIT"
@@ -179,10 +154,40 @@ def mainMenu():
             mode = str.lower(input("> "))
             print("")
 
+def dataMode():
+    """Data exploration mode"""
+    print("test!")
+
+
 def play20Q():
     """Plays the game!"""
+    categorySelecting = True
+
+    print("Please enter your category: '[A]nimal', '[P]lant', '[M]ineral', or '[O]ther'.")
+    input1 = str.lower(input("> "))
+    while (categorySelecting):
+        if input1 == "animal" or input1 == "a":
+            categorySelecting = False
+            game.setCategory("animal")
+        elif input1 == "plant" or input1 == "p":
+            categorySelecting = False
+            game.setCategory("plant")
+        elif input1 == "mineral" or input1 == "m":
+            categorySelecting = False
+            game.setCategory("mineral")
+        elif input1 == "other" or input1 == "o":
+            categorySelecting = False
+            game.setCategory("other")
+        elif input1 == "quit" or input1 == "q":
+            return "EXIT"
+        else:
+            print("Please enter a valid category.")
+            input1 = str.lower(input("> "))
+            print("")
+
     questions = 0  # keeps track of number of questions asked
     playing = True  # keeps track of whether the player is still playing
+
     while (playing and questions <= 19):
         questions += 1  # increment questions
         guess = oG.guessObject(game)
@@ -196,6 +201,7 @@ def play20Q():
                 if(ans == "y" or ans == "yes"):
                     playing = False
                     entering = False
+                    addChars(guess[0], game)
                 elif(ans == "n" or ans == "no"):
                     entering = False
                 elif(ans == "quit" or ans == "q"):
@@ -225,12 +231,20 @@ def play20Q():
 
     print("Thank you for playing!")
 
+def addChars(obj, g):
+    """Adds the characteristics defined in a gamestate g to an object, obj."""
+    objs = []
+    for i in dataBase:
+        objs.append(i.get())
+    dataBase[objs.index(obj)].addTag(g.getChars())
+    saveData()
+
 loadData()
 saveData()
 
 #Game initializations
-oG = oG.oGuesser(dataBase, charDictPath)
-cP = cP.cPicker(dataBase, charDictPath)
+oG = oG.oGuesser(dataBase)
+cP = cP.cPicker(dataBase, charDict)
 qB = qB.qBuilder()
 game = Gs.gameState()
 
