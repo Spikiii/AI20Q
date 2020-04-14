@@ -11,44 +11,90 @@ import nonMLOGuesser as oG
 dataBase = []
 
 #Settings
-dataPath = "data/data.txt"
 charDictPath = "data/charDict.txt"
+dataPath = "data/data.txt"
 confidenceGuess = 0.8 #Controls the confidence that the AI is willing to guess at
 
-def loadData(dP = dataPath):
+#Dictionaries
+charDict = {} #Characteristic dictionary as {characteristic:(id,qtype)}
+
+def loadData(cDP = charDictPath, dP = dataPath):
     """Loads the data specified at dataPath."""
+    global charDict
     global dataBase
 
+    rawCharDict = []
     rawData = []
+
+    #Clearing out the old charDict and dataBase
+    charDict = {}
     dataBase = []
 
-    with open(dP, "r") as f: #Reads through the data line by line
+
+    #Reads through the characteristic dictionary file line by line
+    with open(cDP, "r") as f:
+        for line in f:
+            rawCharDict.append(line[:-1])
+
+    #Creates charDict
+    for i in rawCharDict:
+        if(i != "" and i[0] != "#"): #Ignores any line that has a # at its start or is empty
+            line = i.split(",")
+            charDict[line[1]] = (line[0], line[2])
+
+    #Reads through the data file line by line
+    with open(dP, "r") as f:
         for line in f:
             rawData.append(line[:-1])
 
+    #Creates dataBase
     for i in rawData:
         if(i != "" and i[0] != "#"): #Ignores any line that has a # at its start or is empty
             line = i.split(",")
             chars = []
             for j in range(2, len(line)):
+                charName = str.lower(line[j])
                 if(line[j][0] == "!"):
-                    c = Char.characteristic(str.lower(line[j][1:]), False)
+                    c = Char.characteristic(charName[1:], False, charDict[charName[1:]][1])
                 else:
-                    c = Char.characteristic(str.lower(line[j]), True)
+                    c = Char.characteristic(charName, True, charDict[charName][1])
                 chars.append(c)
 
             dn = Dn.dataNode(str.lower(line[0]), str.lower(line[1]), chars)
             dataBase.append(dn)
 
-def saveData(dP = dataPath):
+def saveData(cPD = charDictPath, dP = dataPath):
     """Saves the data to the file specified at dataPath."""
-    lines = []
-    lines.append("#Data set")
-    lines.append("#other name,category,char1,char2,...")
-    lines.append("#Categories: animal,plant,mineral,other")
-    lines.append("")
+    global charDict
+    global dataBase
 
-    #Converts everything in the dataBase to a string format for export
+    #Creating charDict file
+    charLines = []
+    charLines.append("#Character Dictionary")
+    charLines.append("#ID,char,qtype")
+    charLines.append("")
+
+    #Converts everything in qDict to a string format for export
+    count = 0
+    for i in charDict.keys():
+        charLines.append(str(count) + "," + i + "," + charDict[i][1])
+        count += 1
+
+    #Write charLines into cPD
+    with open(cPD, "w") as f:
+        for i in charLines:
+            f.write(str(i) + "\n")
+        f.write("\n#END OF FILE#")
+    f.close()
+
+    #Creating dataBase file
+    dataLines = []
+    dataLines.append("#Data set")
+    dataLines.append("#other name,category,char1,char2,...")
+    dataLines.append("#Categories: animal,plant,mineral,other")
+    dataLines.append("")
+
+    #Converts everything in dataBase to a string format for export
     for i in dataBase:
         chs = i.get() + "," + i.getCat()
         for j in i.getTags():
@@ -56,10 +102,11 @@ def saveData(dP = dataPath):
                 chs += "," + j.get()
             else:
                 chs += "," + "!" + j.get()
-        lines.append(chs)
+        dataLines.append(chs)
 
+    #Write dataLines into dP
     with open(dP, "w") as f:
-        for i in lines:
+        for i in dataLines:
             f.write(str(i) + "\n")
         f.write("\n#END OF FILE#")
     f.close()
@@ -179,6 +226,7 @@ def play20Q():
     print("Thank you for playing!")
 
 loadData()
+saveData()
 
 #Game initializations
 oG = oG.oGuesser(dataBase, charDictPath)

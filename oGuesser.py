@@ -21,8 +21,6 @@ class oGuesser:
     revChars = {} #Characteristics as {characteristic:n}
     cats = {0:"animal", 1:"plant", 2:"mineral", 3:"other"} #Categories
     revCats = {"animal":0, "plant":1, "mineral":2, "other":3}
-    letters = {0:" ", 1:"a", 2:"b", 3:"c", 4:"d", 5:"e", 6:"f", 7:"g", 8:"h", 9:"i", 10:"j", 11:"k", 12:"l", 13:"m", 14:"n", 15:"o", 16:"p", 17:"q", 18:"r", 19:"s", 20:"t", 21:"u", 22:"v", 23:"w", 24:"x", 25:"y", 26:"z"} #Letters as {n:letter}
-    revLetters = {" ":0, "a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9, "j":10, "k":11, "l":12, "m":13, "n":14, "o":15, "p":16, "q":17, "r":18, "s":19, "t":20, "u":21, "v":22, "w":23, "x":24, "y":25, "z":26} #Letters as {letter:n}
 
     #Setting up stuff for Keras
     model = []
@@ -40,22 +38,13 @@ class oGuesser:
 
     def __init__(self, dB, cD):
         for i in dB:
-            self.data.append([i.get(), i.getCat(), i.getTags()])
+            self.data.append([i.get(), i.getCat(), i.getTags(), i.getQType()])
         self.charDictPath = cD
 
         self.buildChars()
-        self.buildLetterDict()
 
         #print(self.chars)
         #print(self.trainingData)
-
-    def buildLetterDict(self):
-        """Creates a dictionary of letters. This is called as part of initialization."""
-        for i in self.data:
-            for j in i[0]:
-                if (not j in self.revLetters):
-                    self.letters[len(self.letters)] = j
-                    self.revLetters[j] = len(self.revLetters)
 
     def buildChars(self):
         """Builds a characteristic dictionary from the database."""

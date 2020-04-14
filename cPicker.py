@@ -1,9 +1,5 @@
 import characteristic as char
 import random as Rd
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.models import load_model
-from keras.optimizers import SGD
 import numpy as np
 
 class cPicker:
@@ -20,20 +16,6 @@ class cPicker:
     chars = {}  # Characteristics as {n:characteristic}
     revChars = {}  # Characteristics as {characteristic:n}
     qTypes = {} # Dictionary linking {characteristic:qType}
-
-    #Setting stuff up for Keras
-    model = []
-    try:
-        model = load_model(modelPath)
-    except:
-        model = Sequential()
-        model.add(Dense(40, input_dim=41, activation="relu"))
-        model.add(Dense(35, activation="sigmoid"))
-        model.add(Dense(30, activation="sigmoid"))
-
-        opt = SGD(lr=0.000001, decay=1e-6, momentum=0.9, nesterov=True)
-        model.compile(loss='binary_crossentropy', optimizer=opt, metrics=['accuracy'])
-        model.save(modelPath)
 
     def __init__(self, dB, cD):
         self.dataBase = dB
@@ -93,6 +75,6 @@ class cPicker:
         else:
             return char.characteristic("living")"""
         picked = char.characteristic(Rd.choice(list(self.revChars.keys()))) #Gets a random characteristic from the characteristic dictionary
-        picked.setQType(chars[picked.get()])
+        picked.setQType(self.chars[picked.get()])
         return picked
         #TODO, above is demo code
