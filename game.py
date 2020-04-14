@@ -416,7 +416,11 @@ def play20Q():
                     print("Please enter [y] or [n].")
                     ans = str.lower(input("> "))
         else:
-            char = cP.getChar(game)  # get the characteristic to check about this round
+            obj = []
+            for i in dataBase:
+                    if(i.get() == guess[0]):
+                        obj = i
+            char = cP.getChar(game, obj)  # get the characteristic to check about this round
             print(str(questions) + ". " + qB.getQuestion(char) + " [y/n]")
             ans = str.lower(input("> "))  # builds a question and asks the user
             entering = True

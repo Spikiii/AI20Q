@@ -22,7 +22,7 @@ class cPicker:
             self.dataBase.append(dN.dataNode(i.get().lower(), i.getCat(), i.getTags()))
         self.chars = cD
 
-    def getChar(self, gameState):
+    def getChar(self, gameState, currGuess):
         """Gets a characteristic to ask about."""
 
         """if gameState.getCategory() == "animal":
@@ -33,7 +33,15 @@ class cPicker:
             return char.characteristic("precious")
         else:
             return char.characteristic("living")"""
-        randChar = Rd.choice(list(self.chars.keys()))
-        picked = char.characteristic(randChar, True, self.chars[randChar][1])  #Gets a random characteristic from the characteristic dictionary
+        GChar = Rd.choice(list(self.chars.keys()))
+        for i in currGuess.getTags():
+            flag = False
+            currChar = i.get()
+            for k in gameState.getChars():
+                if(currChar == k.get()):
+                    flag = True
+            if (flag == False):
+                GChar = i.get()
+        picked = char.characteristic(GChar, True, self.chars[GChar][1])  #Gets a random characteristic from the characteristic dictionary
         return picked
         #TODO, above is demo code
