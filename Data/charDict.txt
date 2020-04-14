@@ -1,323 +1,322 @@
 #Character Dictionary
-#ID,characteristic
+#Don't touch this please. The model will need to retrain if you do.
 
-0,living
-1,larger than breadbox
-2,can walk
-3,can fly
-4,can swim
-5,lays eggs
-6,mammal
-7,rodent
-8,bird
-9,has fur
-10,has feathers
-11,eats bread
-12,eats bugs
-13,lives in nest
-14,lives in pond
-15,has beak
-16,has bill
-17,has wings
-18,has legs
-19,can float
-20,has webbed feet
-21,smaller than breadbox
-22,lives in mouse hole
-23,has tail
-24,has ears
-25,gives live birth
-26,eats cheese
-27,eaten by cats
-28,has four legs
-29,vegetable
-30,red skin
-31,red inside
-32,sour flavor
-33,medium size
-34,round shaped
-35,thin stem
-36,fruit
-37,yellow skin
-38,white  inside
-39,sweet flavor
-40,long shaped
-41,thick stem
-42,brown skin
-43,oval shaped
-44,green skin
-45,green inside
-46,large size
-47,seeds
-48,black seeds
-49,yellow inside
-50,leaf shaped
-51,white skin
-52,small size
-53,orange skin
-54,orange inside
-55,creamy flavor
-56,white seeds
-57,purple skin
-58,onion flavor
-59,bitter flavor
-60,heart shaped
-61,pit
-62,brown pit
-63,peppery flavor
-64,root shaped
-65,black skin
-66,white inside
-67,yellow seeds
-68,purple inside
-69,brown seeds
-70,blue skin
-71,blue inside
-72,pink inside
-73,black pit
-74,white pit
-75,pink skin
-76,cold air
-77,has a fan
-78,removes heat
-79,removes moisture
-80,dehumidify
-81,evaporative
-82,ice
-83,freeze
-84,cold
-85,bread
-86,baker
-87,flat
-88,oven
-89,used to bake
-90,cooking
-91,cushion
-92,chair
-93,sat on
-94,sit
-95,wide
-96,soft
-97,four-legged
-98,rectangular
-99,square
-100,circular
-101,hard
-102,flat-screen
-103,wires
-104,shows
-105,movies
-106,entertainment
-107,wooden
-108,metal
-109,recline
-110,couch
-111,comfortable
-112,sink into
-113,entrance
-114,doorknob
-115,peephole
-116,knock
-117,handle
-118,food
-119,door
-120,organization
-121,storage
-122,book
-123,shelf
-124,layers
-125,clothes
-126,withdraw
-127,pants
-128,brightness
-129,light
-130,bright
-131,bulb
-132,electricity
-133,vision
-134,heat
-135,hot
-136,not cold
-137,white
-138,erase
-139,marker
-140,draw
-141,jacket
-142,triangular
-143,baby
-144,baby food
-145,child
-146,safe
-147,sleep
-148,pillow
-149,bed frame
-150,nighttime
-151,rest
-152,bed
-153,warm
-154,fuzzy
-155,cover
-156,dry
-157,towel
-158,shower
-159,wet
-160,sharp
-161,mix
-162,drink
-163,blend
-164,fast
-165,combine
-166,read
-167,boring
-168,words
-169,paper
-170,homework
-171,closet
-172,drawer
-173,hanger
-174,blockage
-175,string
-176,bathtub cover
-177,hidden
-178,privacy
-179,wrinkled
-180,clean
-181,water
-182,bathtub
-183,standing
-184,bathroom
-185,plug
-186,drain
-187,curtain
-188,wine
-189,fancy
-190,breakable
-191,container
-192,stores beverages
-193,holds liquid
-194,liquid
-195,stores food
-196,plastic
-197,glass
-198,gets rid of wrinkles
-199,iron
-200,blades
-201,air
-202,freezing
-203,spin
-204,makes food hot
-205,cooks food
-206,floor
-207,walked on
-208,three prongs
-209,utensil
-210,eat
-211,stab
-212,used to eat
-213,used to poke
-214,dangerous
-215,cut
-216,kitchen
-217,round
-218,soup
-219,more quantity
-220,used to carry
-221,sound
-222,music
-223,radio
-224,communication
-225,songs
-226,cook
-227,bake
-228,suck up
-229,loud
-230,chore
-231,cleans clothes
-232,laundry
-233,drys clothes
-234,has hair
-235,has feather
-236,produce milk
-237,live in water
-238,a predator
-239,has teeth
-240,has backbone
-241,breath in the air
-242,poisonous
-243,has fins
-244,is domestic
-245,is catsize
-246,has six legs
-247,has eight legs
-248,reptile
-249,fish
-250,amphibian
-251,bug
-252,invertebrate
-253,no bar in flag
-254,3 stripes in the flag
-255,5 colors in the flag
-256,has red in flag
-257,has green in flag
-258,has blue in flag
-259,has yellow in flag
-260,has white in flag
-261,has black in flag
-262,has orange or brown in flag
-263,main flag color is green
-264,has circle in the flag
-265,has sun or star in the flag
-266,has crescent moon symbol in flag
-267,has triangle in flag
-268,has text in flag
-269,in north america
-270,in south america
-271,in europe
-272,in africa
-273,in asia
-274,in oceania
-275,in north eastern hemisphere
-276,in south eastern hemisphere
-277,in south western hemisphere
-278,in north western hemisphere
-279,larger than united states
-280,larger than united kingdom
-281,larger than turkey
-282,more than 100 million people
-283,speak english
-284,speak spanish
-285,speak french
-286,speak german
-287,speak chinese
-288,speak arabic
-289,no stripe in the flag
-290,3 colors in the flag
-291,main flag color is red
-292,2 bar in flag
-293,main flag color is blue
-294,3 bar in flag
-295,main flag color is gold
-296,2 stripes in the flag
-297,1 stripe in the flag
-298,main flag color is white
-299,2 colors in the flag
-300,8 colors in the flag
-301,6 colors in the flag
-302,4 colors in the flag
-303,main flag color is orange
-304,5 stripes in the flag
-305,1 bar in flag
-306,main flag color is black
-307,7 colors in the flag
-308,9 stripes in the flag
-309,1 stripe in the flag1 stripe in the flag
-310,1 color in the flag
-311,1 stripe in the flag4 stripes in the flag
-312,4 stripes in the flag
-313,main flag color is brown
-314,5 bar in flag
-315,6 stripes in the flag
-316,1 stripe in the flag3 stripes in the flag
-317,7 stripes in the flag
+0,living,0
+1,larger than breadbox,0
+2,walk,1
+3,fly,1
+4,swim,1
+5,lay eggs,2
+6,mammal,3
+7,rodent,3
+8,bird,3
+9,fur,4
+10,feathers,4
+11,eat bread,2
+12,eat bugs,2
+13,live in nests,2
+14,live in ponds,2
+15,a beak,4
+16,a bill,4
+17,wings,4
+18, legs,4
+19,float,2
+20,webbed feet,4
+21,smaller than breadbox,0
+22,live in mouse hole,2
+23,a tail,0
+24,ears,4
+25,give live birth,2
+26,eat cheese,2
+27,eaten by cats,0
+28,four legs,4
+29,a vegetable,0
+30,red skin,4
+31,red inside,4
+32,sour flavor,4
+33,of a medium size,0
+34,round shaped,0
+35,a thin stem,4
+36,fruit,3
+37,yellow skin,4
+38,a white inside,4
+39,a sweet flavor,4
+40,long shaped,0
+41,a thick stem,4
+42,brown skin,4
+43,oval shaped,0
+44,green skin,4
+45,a green inside,4
+46,of a large size,0
+47,seeds,4
+48,black seeds,4
+49,a yellow inside,4
+50,leaf shaped,0
+51,white skin,4
+52,of small size,0
+53,orange skin,4
+54,an orange inside,4
+55,a creamy flavor,4
+56,white seeds,4
+57,purple skin,4
+58,an onion flavor,4
+59,a bitter flavor,4
+60,heart shaped,0
+61,a pit,4
+62,a brown pit,4
+63,a peppery flavor,4
+64,root shaped,0
+65,black skin,4
+66,a white inside,4
+67,yellow seeds,4
+68,a purple inside,4
+69,brown seeds,4
+70,blue skin,4
+71,a blue inside,4
+72,a pink inside,4
+73,a black pit,4
+74,a white pit,4
+75,pink skin,4
+76,cold air,5
+77,a fan,4
+78,remove heat,2
+79,remove moisture,2
+80,dehumidify,2
+81,evaporative,0
+82,ice,5
+83,freeze,2
+84,cold,0
+85,bread.5
+86,baker,3
+87,flat,0
+88,ovens,5
+89,used to bake,0
+90,cooking,5
+91,cushion,6
+92,chair,6
+93,sat on,0
+94,sitting,5
+95,wide,0
+96,soft,0
+97,four-legged,0
+98,rectangular,0
+99,a square,0
+100,circular,0
+101,hard,0
+102,flat-screened,0
+103,wires,4
+104,shows,5
+105,movies,5
+106,entertainment,5
+107,wooden,0
+108,metal,0
+109,recline,7
+110,couch,6
+111,comfortable,0
+112,sink into,7
+113,an entrance,0
+114,a doorknob,4
+115,a peephole,4
+116,knock on,7
+117,a handle,4
+118,food,6
+119,door,6
+120,organization,6
+121,storage,6
+122,book,6
+123,shelf,6
+124,layers,6
+125,clothes,6
+126,withdraw,7
+127,pants,6
+128,brightness,4
+129,light,0
+130,bright,0
+131,a bulb,4
+132,electricity,5
+133,vision,4
+134,heat,4
+135,hot,0
+136,not cold,0
+137,white,0
+138,erase,1
+139,a marker,0
+140,draw,2
+141,jacket,6
+142,triangular,0
+143,a baby,0
+144,baby food,6
+145,a child,0
+146,safe,0
+147,sleep,5
+148,pillow,5
+149,bed frame,6
+150,nighttime,5
+151,rest,5
+152,beds,5
+153,warm,0
+154,fuzzy,0
+155,cover,6
+156,dry,1
+157,towels,5
+158,showers,5
+159,wet,0
+160,sharp,0
+161,mix,1
+162,drink,7
+163,blend,7
+164,fast,0
+165,combine,7
+166,read,7
+167,boring,0
+168,words,4
+169,paper,4
+170,homework,5
+171,closets,5
+172,drawers,5
+173,hangers,5
+174,blockage,6
+175,a string,4
+176,bathtub,-1
+177,hidden,0
+178,privacy,4
+179,wrinkled,0
+180,clean,0
+181,water,5
+182,standing,0
+183,bathrooms,6
+184,a plug,4
+185,a drain,4
+186,a curtain,4
+187,wine,5
+188,fancy,0
+189,breakable,0
+190,a container,0
+191,stores beverages,2
+192,hold liquid,2
+193,liquid,0
+194,store food,2
+195,plastic,0
+196,glass,0
+197,gets rid of wrinkles,2
+198,iron,0
+199,blades,4
+200,air,5
+201,freezing,5
+202,spin,2
+203,make food hot,2
+204,cook food,2
+205,a floor,0
+206,walked on,0
+207,three prongs,4
+208,utensil,3
+209,eat,2
+210,stab,2
+211,used to eat,0
+212,used to poke,0
+213,dangerous,0
+214,cut,1
+215,kitchen,5
+216,round,0
+217,soup,5
+218,more quantity,-1
+219,used to carry,0
+220,sound,5
+221,music,5
+222,radio,5
+223,communication,5
+224,songs,5
+225,cooked,0
+226,baked,0
+227,suck up,1
+228,loud,0
+229,chore,6
+230,clean clothes,2
+231,laundry,5
+232,dry clothes,2
+233,hair,4
+234,feathers,4
+235,produce milk,2
+236,live in water,2
+237,a predator,0
+238,teeth,4
+239,a backbone,4
+240,breath in the air,2
+241,poisonous,0
+242,fins,4
+243,domestic,0
+244,cat sized,0
+245,six legs,4
+246,eight legs,4
+247,a reptile,0
+248,a fish,0
+249,an amphibian,0
+250,a bug,0
+251,an invertebrate,0
+252,no bar in flag,4
+253,3 stripes in the flag,4
+254,5 colors in the flag,4
+255,red in flag,4
+256,green in flag,4
+257,blue in flag,4
+258,yellow in flag,4
+259,white in flag,4
+260,black in flag,4
+261,orange or brown in flag,4
+262,main flag color green,0
+263,circle in the flag,3
+264,sun or star in the flag,3
+265,crescent moon symbol in flag,3
+266,triangle in flag,3
+267,text in flag,4
+268,in north america,0
+269,in south america,0
+270,in europe,0
+271,in africa,0
+272,in asia,0
+273,in oceania,0
+274,in north eastern hemisphere,0
+275,in south eastern hemisphere,0
+276,in south western hemisphere,0
+277,in north western hemisphere,0
+278,larger than united states,0
+279,larger than united kingdom,0
+280,larger than turkey,0
+281,more than 100 million people,4
+282,speak english,2
+283,speak spanish,2
+284,speak french,2
+285,speak german,2
+286,speak chinese,2
+287,speak arabic,2
+288,no stripe in the flag,4
+289,3 colors in the flag,4
+290,main flag color is red,4
+291,2 bar in flag,4
+292,main flag color is blue,4
+293,3 bar in flag,4
+294,main flag color is gold,4
+295,2 stripes in the flag,4
+296,1 stripe in the flag,4
+297,main flag color is white,4
+298,2 colors in the flag,4
+299,8 colors in the flag,4
+300,6 colors in the flag,4
+301,4 colors in the flag,4
+302,main flag color is orange,4
+303,5 stripes in the flag,4
+304,1 bar in flag,4
+305,main flag color is black,4
+306,7 colors in the flag,4
+307,9 stripes in the flag,4
+308,1 stripe in the flag,4
+309,1 color in the flag,4
+310,3 stripe in the flag,4
+311,4 stripes in the flag,4
+312,main flag color is brown,4
+313,5 bar in flag,4
+314,6 stripes in the flag,4
+315,1 stripe in the flag,4
+316,7 stripes in the flag,4
 
 #END OF FILE#
