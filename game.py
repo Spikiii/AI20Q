@@ -457,9 +457,3 @@ qB = qB.qBuilder()
 game = Gs.gameState()
 
 playGame()
-
-#for i in range(0,1):
-#    oG.train()
-#    print("Test with 'Tomato':", oG.guessObject(Gs.gameState("plant", "vegetable,red skin,red inside,sour flavor,medium size,round shaped,thin stem")))
-#    print("Test with some of 'Duck':", oG.guessObject(Gs.gameState("animal","living,larger than breadbox,can walk,can fly,can swim,lays eggs,!mammal,!rodent,bird,!has fur,has feathers")))
-#    print()

@@ -23,16 +23,6 @@ class cPicker:
         self.chars = cD
 
     def getChar(self, gameState, currGuess):
-        """Gets a characteristic to ask about."""
-
-        """if gameState.getCategory() == "animal":
-            return char.characteristic("flying")
-        elif gameState.getCategory() == "plant":
-            return char.characteristic("bark")
-        elif  gameState.getCategory() == "mineral":
-            return char.characteristic("precious")
-        else:
-            return char.characteristic("living")"""
         GChar = Rd.choice(list(self.chars.keys()))
         for i in currGuess.getTags():
             flag = False
